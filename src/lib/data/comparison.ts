@@ -2,11 +2,9 @@ export const comparisonRows = [
   { aspect: "Tahun Lahir", cnd: "1848", tu: "1854" },
   { aspect: "Asal Daerah", cnd: "Aceh Besar", tu: "Aceh Barat" },
   { aspect: "Peran Utama", cnd: "Pejuang Moral", tu: "Panglima Perang" },
-  { aspect: "Gaya Perang", cnd: "Perlawanan Moral & Spiritual", tu: "Gerilya & Intelijen" },
-  { aspect: "Senjata Utama", cnd: "Semangat & Keteguhan", tu: "Strategi & Kecerdikan" },
-  { aspect: "Wafat", cnd: "1908 di Sumedang", tu: "1899 di Meulaboh" },
-  { aspect: "Pahlawan Nasional", cnd: "1964 (Keppres 106)", tu: "Resmi diakui negara" },
-  { aspect: "Warisan Utama", cnd: "Simbol keteguhan wanita", tu: "Inspirasi taktik militer" },
+  { aspect: "Senjata Andalan", cnd: "Keteguhan Hati", tu: "Strategi Cerdik" },
+  { aspect: "Akhir Hayat", cnd: "Wafat di Pengasingan", tu: "Gugur di Medan Perang" },
+  { aspect: "Warisan Utama", cnd: "Film Nasional 1988", tu: "Nama Jalan di Jakarta" },
 ];
 
 export const similarities = [
