@@ -14,7 +14,75 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      game_scores: {
+        Row: {
+          created_at: string
+          id: string
+          player_name: string
+          quiz_correct: number
+          score: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          player_name: string
+          quiz_correct?: number
+          score: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          player_name?: string
+          quiz_correct?: number
+          score?: number
+        }
+        Relationships: []
+      }
+      quiz_questions: {
+        Row: {
+          correct: string
+          created_at: string
+          difficulty: string | null
+          explanation: string | null
+          hero: string
+          id: string
+          option_a: string
+          option_b: string
+          option_c: string
+          option_d: string
+          question: string
+          reward_ammo: number | null
+        }
+        Insert: {
+          correct: string
+          created_at?: string
+          difficulty?: string | null
+          explanation?: string | null
+          hero?: string
+          id?: string
+          option_a: string
+          option_b: string
+          option_c: string
+          option_d: string
+          question: string
+          reward_ammo?: number | null
+        }
+        Update: {
+          correct?: string
+          created_at?: string
+          difficulty?: string | null
+          explanation?: string | null
+          hero?: string
+          id?: string
+          option_a?: string
+          option_b?: string
+          option_c?: string
+          option_d?: string
+          question?: string
+          reward_ammo?: number | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
