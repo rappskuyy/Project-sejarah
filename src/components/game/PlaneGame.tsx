@@ -71,6 +71,7 @@ export const PlaneGame = ({ onGameOver }: Props) => {
     if (picked || !question) return;
     setPicked(opt);
     const correct = opt === question.correct;
+    // Apply reward/penalty after a short pause so the user sees the answer feedback
     setTimeout(() => {
       if (correct) {
         setAmmo(MAX_AMMO);
@@ -79,9 +80,12 @@ export const PlaneGame = ({ onGameOver }: Props) => {
         setAmmo(3); // mercy
         setLives((l) => Math.max(0, l - 1));
       }
+    }, 2600);
+    // Then smoothly fade out the quiz overlay
+    setTimeout(() => {
       setQuizActive(false);
-      setQuestion(null);
-    }, 1400);
+      setTimeout(() => setQuestion(null), 500);
+    }, 3000);
   };
 
   // ─────────────── Canvas game loop ───────────────
