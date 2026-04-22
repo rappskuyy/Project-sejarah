@@ -13,7 +13,9 @@ interface Score {
   created_at: string;
 }
 
-export const LeaderboardSection = () => {
+interface LBProps { embedded?: boolean }
+
+export const LeaderboardSection = ({ embedded = false }: LBProps = {}) => {
   const [scores, setScores] = useState<Score[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -45,20 +47,19 @@ export const LeaderboardSection = () => {
     return <span className="font-mono text-sm text-cream/50">{i + 1}</span>;
   };
 
-  return (
-    <section className="py-24 md:py-32 bg-cream-dark">
-      <div className="container max-w-4xl">
+  const inner = (
+    <>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className={cn("mb-8", embedded ? "text-left" : "text-center mb-12")}
         >
           <p className="label-eyebrow mb-3">Papan Skor Tertinggi</p>
-          <h2 className="heading-display text-4xl md:text-5xl mb-4">
+          <h2 className={cn("heading-display mb-3", embedded ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl mb-4")}>
             <span className="italic text-gradient-gold">Leaderboard</span> Pahlawan
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className={cn("text-muted-foreground", embedded ? "text-sm" : "text-lg max-w-2xl mx-auto")}>
             Para penjaga langit Aceh dengan skor tertinggi. Mainkan game dan jawab kuis
             sejarah untuk masuk papan ini!
           </p>
@@ -116,6 +117,7 @@ export const LeaderboardSection = () => {
           )}
         </motion.div>
 
+        {!embedded && (
         <div className="text-center mt-10">
           <Link
             to="/game"
@@ -124,6 +126,16 @@ export const LeaderboardSection = () => {
             <Plane className="h-4 w-4" /> Mulai Bermain
           </Link>
         </div>
+        )}
+    </>
+  );
+
+  if (embedded) return inner;
+
+  return (
+    <section className="py-24 md:py-32 bg-cream-dark">
+      <div className="container max-w-4xl">
+        {inner}
       </div>
     </section>
   );

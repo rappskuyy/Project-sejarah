@@ -1,14 +1,14 @@
 import { HeroSection } from "@/components/home/HeroSection";
 import { HeroCardsSection } from "@/components/home/HeroCardsSection";
 import { QuoteSection } from "@/components/home/QuoteSection";
-import { LeaderboardSection } from "@/components/home/LeaderboardSection";
+import { GameLeaderboardSection } from "@/components/home/GameLeaderboardSection";
 
 const Home = () => (
   <>
     <HeroSection />
     <HeroCardsSection />
     <QuoteSection />
-    <LeaderboardSection />
+    <GameLeaderboardSection />
   </>
 );
 
