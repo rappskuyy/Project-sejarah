@@ -102,7 +102,7 @@ export const PlaneGame = ({ onGameOver }: Props) => {
     const W = () => canvas.clientWidth;
     const H = () => canvas.clientHeight;
 
-    const player = { x: W() / 2, y: H() - 70, w: 30, h: 36, speed: 5 };
+    const player = { x: W() / 2, y: H() - 70, w: 30, h: 36, speed: 3 };
     const bullets: Bullet[] = [];
     const enemies: Enemy[] = [];
     const explosions: Explosion[] = [];
