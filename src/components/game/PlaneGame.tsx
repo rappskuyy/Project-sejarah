@@ -71,6 +71,7 @@ export const PlaneGame = ({ onGameOver }: Props) => {
     if (picked || !question) return;
     setPicked(opt);
     const correct = opt === question.correct;
+    // Apply reward/penalty after a short pause so the user sees the answer feedback
     setTimeout(() => {
       if (correct) {
         setAmmo(MAX_AMMO);
@@ -79,9 +80,12 @@ export const PlaneGame = ({ onGameOver }: Props) => {
         setAmmo(3); // mercy
         setLives((l) => Math.max(0, l - 1));
       }
+    }, 2600);
+    // Then smoothly fade out the quiz overlay
+    setTimeout(() => {
       setQuizActive(false);
-      setQuestion(null);
-    }, 1400);
+      setTimeout(() => setQuestion(null), 500);
+    }, 3000);
   };
 
   // ─────────────── Canvas game loop ───────────────
@@ -102,7 +106,7 @@ export const PlaneGame = ({ onGameOver }: Props) => {
     const W = () => canvas.clientWidth;
     const H = () => canvas.clientHeight;
 
-    const player = { x: W() / 2, y: H() - 70, w: 30, h: 36, speed: 5 };
+    const player = { x: W() / 2, y: H() - 70, w: 30, h: 36, speed: 3 };
     const bullets: Bullet[] = [];
     const enemies: Enemy[] = [];
     const explosions: Explosion[] = [];
@@ -458,16 +462,91 @@ export const PlaneGame = ({ onGameOver }: Props) => {
       <div className="relative">
         <canvas
           ref={canvasRef}
-          className="w-full aspect-[16/10] rounded-lg border border-gray-800 bg-[#0a0a1a]"
+          className="w-full aspect-[16/9] rounded-lg border border-gray-800 bg-[#0a0a1a]"
           tabIndex={0}
         />
         {waveAnnouncement && (
-          <div className="absolute inset-0 grid place-items-center pointer-events-none">
+          <div className="absolute inset-0 grid place-items-center pointer-events-none transition-opacity duration-500">
             <div className="bg-black/60 px-8 py-4 rounded-xl border border-[#C8922A]">
               <p className="font-cinzel text-[#FFD66E] text-lg md:text-2xl tracking-widest text-center"
                  style={{ textShadow: "0 0 20px rgba(200,146,42,0.6)" }}>
                 {waveAnnouncement}
               </p>
+            </div>
+          </div>
+        )}
+
+        {/* In-canvas Quiz overlay with fade transition */}
+        {question && (
+          <div
+            className={cn(
+              "absolute inset-0 flex items-center justify-center p-4 md:p-6 transition-all duration-500 ease-out",
+              quizActive ? "opacity-100 backdrop-blur-sm" : "opacity-0 pointer-events-none"
+            )}
+            style={{ background: "rgba(10,10,26,0.78)" }}
+          >
+            <div
+              className={cn(
+                "w-full max-w-2xl bg-[#0a0a1a]/95 border border-[#C8922A]/40 rounded-xl p-5 md:p-6 shadow-2xl transition-all duration-500 ease-out",
+                quizActive ? "scale-100 translate-y-0 opacity-100" : "scale-95 translate-y-2 opacity-0"
+              )}
+            >
+              <div className="flex justify-center mb-4">
+                <div className="bg-[#2a1f0a] border border-[#C8922A] rounded-full px-4 py-1.5 flex items-center gap-2">
+                  <Bell className="h-3.5 w-3.5 text-[#C8922A]" />
+                  <span className="text-white text-xs">Ammo Habis! Jawab Kuis untuk Lanjut</span>
+                </div>
+              </div>
+              <hr className="border-gray-700 mb-4" />
+              <h3 className="text-white text-base md:text-lg text-center font-medium mb-5">{question.question}</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {(["a", "b", "c", "d"] as const).map((opt) => {
+                  const val = question[`option_${opt}` as keyof QuizQuestion] as string;
+                  const isPicked = picked === opt;
+                  const isCorrectOpt = picked && opt === question.correct;
+                  const isWrongOpt = isPicked && opt !== question.correct;
+                  return (
+                    <button
+                      key={opt}
+                      onClick={() => handleAnswer(opt)}
+                      disabled={!!picked}
+                      className={cn(
+                        "border rounded-lg p-3 text-left bg-[#1a1a1a] text-white text-sm transition-all duration-300",
+                        !picked && "border-gray-600 hover:border-[#C8922A] hover:bg-[#1a1500]",
+                        isCorrectOpt && "border-green-500 bg-green-900/30 scale-[1.02]",
+                        isWrongOpt && "border-red-500 bg-red-900/30",
+                      )}
+                    >
+                      <span className="text-[#C8922A] font-bold mr-2">{opt.toUpperCase()}.</span>
+                      {val}
+                      {isCorrectOpt && <Check className="inline h-4 w-4 ml-2 text-green-400" />}
+                      {isWrongOpt && <X className="inline h-4 w-4 ml-2 text-red-400" />}
+                    </button>
+                  );
+                })}
+              </div>
+              <div
+                className={cn(
+                  "overflow-hidden transition-all duration-500 ease-out",
+                  picked ? "max-h-40 opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"
+                )}
+              >
+                {picked && (
+                  <div
+                    className={cn(
+                      "p-3 rounded-lg text-center text-sm",
+                      picked === question.correct ? "bg-green-900/30 text-green-400" : "bg-red-900/30 text-red-400",
+                    )}
+                  >
+                    {picked === question.correct
+                      ? `✓ Benar! Ammo direfill penuh`
+                      : "✗ Salah. Nyawa berkurang, ammo darurat diberi."}
+                    {question.explanation && (
+                      <p className="text-gray-400 text-xs mt-1">{question.explanation}</p>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}
@@ -477,59 +556,6 @@ export const PlaneGame = ({ onGameOver }: Props) => {
       <p className="text-center text-xs text-gray-400 mt-3">
         ← → atau A D untuk bergerak  |  SPASI atau ↑ untuk menembak
       </p>
-
-      {/* In-page Quiz */}
-      {quizActive && question && (
-        <div className="mt-6 bg-[#0a0a1a] border border-gray-800 rounded-lg p-6">
-          <div className="flex justify-center mb-4">
-            <div className="bg-[#2a1f0a] border border-[#C8922A] rounded-full px-5 py-1.5 flex items-center gap-2">
-              <Bell className="h-3.5 w-3.5 text-[#C8922A]" />
-              <span className="text-white text-xs">Ammo Habis! Jawab Kuis untuk Lanjut</span>
-            </div>
-          </div>
-          <hr className="border-gray-700 mb-5" />
-          <h3 className="text-white text-lg md:text-xl text-center font-medium mb-5">{question.question}</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
-            {(["a", "b", "c", "d"] as const).map((opt) => {
-              const val = question[`option_${opt}` as keyof QuizQuestion] as string;
-              const isPicked = picked === opt;
-              const isCorrectOpt = picked && opt === question.correct;
-              const isWrongOpt = isPicked && opt !== question.correct;
-              return (
-                <button
-                  key={opt}
-                  onClick={() => handleAnswer(opt)}
-                  disabled={!!picked}
-                  className={cn(
-                    "border rounded-lg p-3.5 text-left bg-[#1a1a1a] text-white text-sm transition-all",
-                    !picked && "border-gray-600 hover:border-[#C8922A] hover:bg-[#1a1500]",
-                    isCorrectOpt && "border-green-500 bg-green-900/20",
-                    isWrongOpt && "border-red-500 bg-red-900/20",
-                  )}
-                >
-                  <span className="text-[#C8922A] font-bold mr-2">{opt.toUpperCase()}.</span>
-                  {val}
-                  {isCorrectOpt && <Check className="inline h-4 w-4 ml-2 text-green-400" />}
-                  {isWrongOpt && <X className="inline h-4 w-4 ml-2 text-red-400" />}
-                </button>
-              );
-            })}
-          </div>
-          {picked && (
-            <div className={cn(
-              "mt-4 p-3 rounded-lg text-center text-sm",
-              picked === question.correct ? "bg-green-900/30 text-green-400" : "bg-red-900/30 text-red-400",
-            )}>
-              {picked === question.correct
-                ? `✓ Benar! Ammo direfill penuh`
-                : "✗ Salah. Nyawa berkurang, ammo darurat diberi."}
-              {question.explanation && (
-                <p className="text-gray-400 text-xs mt-1">{question.explanation}</p>
-              )}
-            </div>
-          )}
-        </div>
-      )}
     </div>
   );
 };
