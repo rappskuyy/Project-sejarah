@@ -5,8 +5,6 @@ import { MapPin, Sword, Flame, Skull, ArrowRight, Dot } from "lucide-react";
 import type { HeroData } from "@/types";
 import { cn } from "@/lib/utils";
 
-interface Props { hero: HeroData; }
-
 interface Props { hero: HeroData; compact?: boolean }
 
 export const HeroCard = ({ hero, compact = false }: Props) => {

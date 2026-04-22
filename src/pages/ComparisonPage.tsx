@@ -54,24 +54,23 @@ const ComparisonPage = () => {
 
       {tab === "compare" ? (
         <section className="pb-24">
-          <div className="container max-w-4xl">
-            <div className="relative grid md:grid-cols-2 gap-4 md:gap-6 items-stretch text-sm">
-              <HeroCard hero={cutNyakDienData} />
-              <HeroCard hero={teukuUmarData} />
-              <div className="hidden md:grid place-items-center absolute left-1/2 top-[18%] -translate-x-1/2 h-12 w-12 rounded-full bg-gradient-gold shadow-gold font-cinzel text-xs font-bold text-primary-foreground z-10 animate-pulse-gold">VS</div>
+          <div className="container max-w-3xl">
+            <div className="grid md:grid-cols-2 gap-3 md:gap-4 items-stretch">
+              <HeroCard hero={cutNyakDienData} compact />
+              <HeroCard hero={teukuUmarData} compact />
             </div>
 
-            <div className="mt-12 rounded-2xl overflow-hidden bg-brown-dark text-cream shadow-elegant max-w-4xl mx-auto">
-              <div className="grid grid-cols-3 text-xs md:text-sm font-cinzel tracking-[0.2em] uppercase border-b border-cream/10">
-                <div className="p-4 text-gold-light text-center md:text-left md:pl-6">Cut Nyak Dien</div>
-                <div className="p-4 text-cream/70 text-center">Aspek</div>
-                <div className="p-4 text-maroon-light text-center md:text-right md:pr-6">Teuku Umar</div>
+            <div className="mt-10 rounded-2xl overflow-hidden bg-brown-dark text-cream shadow-elegant max-w-3xl mx-auto">
+              <div className="grid grid-cols-3 text-[0.65rem] md:text-xs font-cinzel tracking-[0.2em] uppercase border-b border-cream/10">
+                <div className="p-3 text-gold-light text-center md:text-left md:pl-5">Cut Nyak Dien</div>
+                <div className="p-3 text-cream/70 text-center">Aspek</div>
+                <div className="p-3 text-maroon-light text-center md:text-right md:pr-5">Teuku Umar</div>
               </div>
               {comparisonRows.map((row, i) => (
-                <div key={row.aspect} className={`grid grid-cols-3 text-sm md:text-base ${i % 2 ? "bg-brown-medium/30" : ""}`}>
-                  <div className="p-4 text-gold-light text-center md:text-left md:pl-6">{row.cnd}</div>
-                  <div className="p-4 text-cream/60 text-center font-cinzel text-xs uppercase tracking-wider">{row.aspect}</div>
-                  <div className="p-4 text-maroon-light text-center md:text-right md:pr-6">{row.tu}</div>
+                <div key={row.aspect} className={`grid grid-cols-3 text-xs md:text-sm ${i % 2 ? "bg-brown-medium/30" : ""}`}>
+                  <div className="p-3 text-gold-light text-center md:text-left md:pl-5">{row.cnd}</div>
+                  <div className="p-3 text-cream/60 text-center font-cinzel text-[0.6rem] uppercase tracking-wider">{row.aspect}</div>
+                  <div className="p-3 text-maroon-light text-center md:text-right md:pr-5">{row.tu}</div>
                 </div>
               ))}
             </div>
