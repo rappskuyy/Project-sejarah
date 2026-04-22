@@ -42,7 +42,7 @@ export const StrategySection = ({ hero }: { hero: HeroData }) => {
 
               <div className="flex justify-between text-xs mb-2">
                 <span className="font-cinzel tracking-widest uppercase text-cream/60">Efektivitas</span>
-                <span className={cn("font-bold", gold ? "text-gold-light" : "text-maroon-light")}>{s.value || s.effectiveness}%</span>
+                <span className={cn("font-bold", gold ? "text-gold-light" : "text-maroon-light")}>{s.effectiveness}%</span>
               </div>
               <div className="h-2 rounded-full bg-cream/10 overflow-hidden">
                 <motion.div

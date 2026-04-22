@@ -54,14 +54,14 @@ const ComparisonPage = () => {
 
       {tab === "compare" ? (
         <section className="pb-24">
-          <div className="container">
-            <div className="relative grid md:grid-cols-2 gap-6 md:gap-10 items-stretch">
+          <div className="container max-w-4xl">
+            <div className="relative grid md:grid-cols-2 gap-4 md:gap-6 items-stretch text-sm">
               <HeroCard hero={cutNyakDienData} />
               <HeroCard hero={teukuUmarData} />
-              <div className="hidden md:grid place-items-center absolute left-1/2 top-[18%] -translate-x-1/2 h-14 w-14 rounded-full bg-gradient-gold shadow-gold font-cinzel text-sm font-bold text-primary-foreground z-10 animate-pulse-gold">VS</div>
+              <div className="hidden md:grid place-items-center absolute left-1/2 top-[18%] -translate-x-1/2 h-12 w-12 rounded-full bg-gradient-gold shadow-gold font-cinzel text-xs font-bold text-primary-foreground z-10 animate-pulse-gold">VS</div>
             </div>
 
-            <div className="mt-16 rounded-2xl overflow-hidden bg-brown-dark text-cream shadow-elegant max-w-5xl mx-auto">
+            <div className="mt-12 rounded-2xl overflow-hidden bg-brown-dark text-cream shadow-elegant max-w-4xl mx-auto">
               <div className="grid grid-cols-3 text-xs md:text-sm font-cinzel tracking-[0.2em] uppercase border-b border-cream/10">
                 <div className="p-4 text-gold-light text-center md:text-left md:pl-6">Cut Nyak Dien</div>
                 <div className="p-4 text-cream/70 text-center">Aspek</div>
