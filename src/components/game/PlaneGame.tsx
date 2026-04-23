@@ -11,6 +11,7 @@ interface Star { x: number; y: number; size: number; speed: number; opacity: num
 interface Cloud { x: number; y: number; width: number; opacity: number; speed: number; color: string; }
 interface Explosion { x: number; y: number; frame: number; maxFrames: number; color: string; }
 interface FloatText { x: number; y: number; text: string; life: number; }
+interface Airdrop { x: number; y: number; vy: number; kind: "heal" | "points"; pulse: number; }
 
 const MAX_AMMO = 10;
 const MAX_LIVES = 3;
@@ -111,6 +112,7 @@ export const PlaneGame = ({ onGameOver }: Props) => {
     const enemies: Enemy[] = [];
     const explosions: Explosion[] = [];
     const floats: FloatText[] = [];
+    const airdrops: Airdrop[] = [];
     const keys: Record<string, boolean> = {};
 
     // Parallax stars
@@ -176,7 +178,8 @@ export const PlaneGame = ({ onGameOver }: Props) => {
       let type: Enemy["type"] = "small";
       if (r < cfg.bigChance) type = "big";
       else if (r < cfg.bigChance + cfg.cannonChance) type = "cannon";
-      const w = type === "big" ? 50 : type === "cannon" ? 36 : 28;
+      // Slightly bigger enemies (per user request)
+      const w = type === "big" ? 62 : type === "cannon" ? 46 : 38;
       enemies.push({
         x: 30 + Math.random() * (W() - 60),
         y: -30,
@@ -185,6 +188,28 @@ export const PlaneGame = ({ onGameOver }: Props) => {
         hp: type === "big" ? 3 : type === "cannon" ? 2 : 1,
         type,
       });
+
+      // ── Airdrop spawn chance ──
+      // 10% chance: heart heal airdrop (touch to collect, +1 life)
+      // 12% chance: shootable point airdrop (shoot to gain +25 points)
+      const ar = Math.random();
+      if (ar < 0.10) {
+        airdrops.push({
+          x: 30 + Math.random() * (W() - 60),
+          y: -20,
+          vy: 1.2,
+          kind: "heal",
+          pulse: 0,
+        });
+      } else if (ar < 0.22) {
+        airdrops.push({
+          x: 30 + Math.random() * (W() - 60),
+          y: -20,
+          vy: 1.4,
+          kind: "points",
+          pulse: 0,
+        });
+      }
     };
 
     // ───── Sprites ─────
@@ -389,6 +414,73 @@ export const PlaneGame = ({ onGameOver }: Props) => {
         }
       }
 
+      // ── Airdrops ──
+      for (let i = airdrops.length - 1; i >= 0; i--) {
+        const a = airdrops[i];
+        a.y += a.vy;
+        a.pulse += 0.12;
+        const size = 18;
+        const glow = 0.55 + Math.sin(a.pulse) * 0.35;
+
+        // draw parachute
+        ctx.save();
+        ctx.translate(a.x, a.y);
+        ctx.fillStyle = a.kind === "heal" ? `rgba(255,90,110,${glow})` : `rgba(255,215,110,${glow})`;
+        ctx.beginPath();
+        ctx.arc(0, -size, size, Math.PI, 0);
+        ctx.fill();
+        // strings
+        ctx.strokeStyle = "rgba(255,255,255,0.45)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(-size + 2, -size); ctx.lineTo(-6, 2);
+        ctx.moveTo(size - 2, -size); ctx.lineTo(6, 2);
+        ctx.stroke();
+        // crate
+        ctx.fillStyle = a.kind === "heal" ? "#7a1f2a" : "#3a2a10";
+        ctx.fillRect(-size / 2, 0, size, size);
+        ctx.strokeStyle = a.kind === "heal" ? "#ff5a6e" : "#FFD66E";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(-size / 2, 0, size, size);
+        // icon
+        ctx.fillStyle = a.kind === "heal" ? "#ffd2d6" : "#fff7d6";
+        ctx.font = "bold 14px monospace";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(a.kind === "heal" ? "♥" : "$", 0, size / 2 + 1);
+        ctx.restore();
+
+        // shootable points airdrop: bullet collision
+        if (a.kind === "points") {
+          for (let j = bullets.length - 1; j >= 0; j--) {
+            const b = bullets[j];
+            if (b.from !== "player") continue;
+            if (Math.abs(b.x - a.x) < size && Math.abs(b.y - (a.y + size / 2)) < size + 4) {
+              bullets.splice(j, 1);
+              airdrops.splice(i, 1);
+              setScore((s) => s + 25);
+              explosions.push({ x: a.x, y: a.y, frame: 0, maxFrames: 12, color: "#FFD66E" });
+              floats.push({ x: a.x, y: a.y, text: "+25", life: 50 });
+              break;
+            }
+          }
+        }
+
+        // heal airdrop: collect on player touch
+        if (a.kind === "heal" && airdrops[i] === a) {
+          if (Math.abs(a.x - player.x) < 22 && Math.abs((a.y + size / 2) - player.y) < 24) {
+            airdrops.splice(i, 1);
+            setLives((l) => Math.min(MAX_LIVES, l + 1));
+            explosions.push({ x: a.x, y: a.y, frame: 0, maxFrames: 12, color: "#ff5a6e" });
+            floats.push({ x: a.x, y: a.y, text: "+1 ♥", life: 55 });
+            continue;
+          }
+        }
+
+        // off screen
+        if (airdrops[i] === a && a.y > h + 40) airdrops.splice(i, 1);
+      }
+
       // explosions
       for (let i = explosions.length - 1; i >= 0; i--) {
         const ex = explosions[i];
@@ -554,7 +646,7 @@ export const PlaneGame = ({ onGameOver }: Props) => {
 
       {/* Footer hint */}
       <p className="text-center text-xs text-gray-400 mt-3">
-        ← → atau A D untuk bergerak  |  SPASI atau ↑ untuk menembak
+        ← → / A D untuk bergerak  |  SPASI / ↑ untuk menembak  |  ♥ Airdrop merah = nyawa (sentuh)  |  $ Airdrop emas = +25 (tembak)
       </p>
     </div>
   );
