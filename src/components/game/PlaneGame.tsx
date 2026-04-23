@@ -11,6 +11,7 @@ interface Star { x: number; y: number; size: number; speed: number; opacity: num
 interface Cloud { x: number; y: number; width: number; opacity: number; speed: number; color: string; }
 interface Explosion { x: number; y: number; frame: number; maxFrames: number; color: string; }
 interface FloatText { x: number; y: number; text: string; life: number; }
+interface Airdrop { x: number; y: number; vy: number; kind: "heal" | "points"; pulse: number; }
 
 const MAX_AMMO = 10;
 const MAX_LIVES = 3;
