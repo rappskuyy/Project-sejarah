@@ -112,6 +112,7 @@ export const PlaneGame = ({ onGameOver }: Props) => {
     const enemies: Enemy[] = [];
     const explosions: Explosion[] = [];
     const floats: FloatText[] = [];
+    const airdrops: Airdrop[] = [];
     const keys: Record<string, boolean> = {};
 
     // Parallax stars
