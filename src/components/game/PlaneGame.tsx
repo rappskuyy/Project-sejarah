@@ -646,7 +646,7 @@ export const PlaneGame = ({ onGameOver }: Props) => {
 
       {/* Footer hint */}
       <p className="text-center text-xs text-gray-400 mt-3">
-        ← → atau A D untuk bergerak  |  SPASI atau ↑ untuk menembak
+        ← → / A D untuk bergerak  |  SPASI / ↑ untuk menembak  |  ♥ Airdrop merah = nyawa (sentuh)  |  $ Airdrop emas = +25 (tembak)
       </p>
     </div>
   );
