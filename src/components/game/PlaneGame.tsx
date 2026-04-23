@@ -178,7 +178,8 @@ export const PlaneGame = ({ onGameOver }: Props) => {
       let type: Enemy["type"] = "small";
       if (r < cfg.bigChance) type = "big";
       else if (r < cfg.bigChance + cfg.cannonChance) type = "cannon";
-      const w = type === "big" ? 50 : type === "cannon" ? 36 : 28;
+      // Slightly bigger enemies (per user request)
+      const w = type === "big" ? 62 : type === "cannon" ? 46 : 38;
       enemies.push({
         x: 30 + Math.random() * (W() - 60),
         y: -30,
@@ -187,6 +188,28 @@ export const PlaneGame = ({ onGameOver }: Props) => {
         hp: type === "big" ? 3 : type === "cannon" ? 2 : 1,
         type,
       });
+
+      // ── Airdrop spawn chance ──
+      // 10% chance: heart heal airdrop (touch to collect, +1 life)
+      // 12% chance: shootable point airdrop (shoot to gain +25 points)
+      const ar = Math.random();
+      if (ar < 0.10) {
+        airdrops.push({
+          x: 30 + Math.random() * (W() - 60),
+          y: -20,
+          vy: 1.2,
+          kind: "heal",
+          pulse: 0,
+        });
+      } else if (ar < 0.22) {
+        airdrops.push({
+          x: 30 + Math.random() * (W() - 60),
+          y: -20,
+          vy: 1.4,
+          kind: "points",
+          pulse: 0,
+        });
+      }
     };
 
     // ───── Sprites ─────
