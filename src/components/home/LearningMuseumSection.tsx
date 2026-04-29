@@ -3,7 +3,7 @@ import { geoMercator, geoPath } from "d3-geo";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, CheckCircle2, Flag, MapPin, Maximize2, Minus, Plus, Route, Shield, Sparkles, Target } from "lucide-react";
-import acehGeoJson from "@/lib/data/acehAdm2.geojson";
+import acehGeoJson from "@/lib/data/acehAdm2";
 
 type GeoFeature = {
   type: "Feature";
