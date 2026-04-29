@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { geoMercator, geoPath } from "d3-geo";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, CheckCircle2, Flag, MapPin, Maximize2, Minus, Plus, Route, Shield, Sparkles, Target } from "lucide-react";
 import acehGeoJson from "@/lib/data/acehAdm2";
@@ -88,34 +88,56 @@ export const LearningMuseumSection = () => {
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const timelineRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  const reduceMotion = useReducedMotion();
 
-  const { path, regionCentroids, routePath } = useMemo(() => {
+  const { path, regionCentroids, eventPoints, routePath } = useMemo(() => {
     const projection = geoMercator().fitSize([MAP_WIDTH, MAP_HEIGHT], mapData as never);
     const generator = geoPath(projection);
     const centroids = new Map<string, [number, number]>();
+    const projectedEvents = new Map<string, [number, number]>();
 
     mapData.features.forEach((feature) => {
       centroids.set(feature.properties.shapeName, generator.centroid(feature as never) as [number, number]);
     });
 
-    const route = events
-      .map((item) => projection(item.focus))
-      .filter(Boolean) as [number, number][];
+    events.forEach((item) => {
+      const point = projection(item.focus);
+      if (point) projectedEvents.set(item.id, point as [number, number]);
+    });
+
+    const route = events.map((item) => projectedEvents.get(item.id)).filter(Boolean) as [number, number][];
 
     return {
       path: generator,
       regionCentroids: centroids,
+      eventPoints: projectedEvents,
       routePath: route.map(([x, y], index) => `${index === 0 ? "M" : "L"}${x.toFixed(1)} ${y.toFixed(1)}`).join(" "),
     };
   }, []);
 
+  const mapTransition = reduceMotion
+    ? { duration: 0.01 }
+    : { duration: 1.35, ease: [0.16, 1, 0.3, 1] as const };
+
+  const calculateConnectedPan = (point: [number, number]) => {
+    const desiredX = MAP_WIDTH / 2 - point[0];
+    const desiredY = MAP_HEIGHT / 2 - point[1];
+    const maxPanX = MAP_WIDTH * 0.16;
+    const maxPanY = MAP_HEIGHT * 0.14;
+
+    return {
+      x: Math.max(-maxPanX, Math.min(maxPanX, desiredX)),
+      y: Math.max(-maxPanY, Math.min(maxPanY, desiredY)),
+    };
+  };
+
   const focusEvent = (item: HistoricalEvent) => {
-    const point = regionCentroids.get(item.region);
+    const point = eventPoints.get(item.id) || regionCentroids.get(item.region);
     setActiveEvent(item);
     setSelectedRegion(item.region);
-    setZoom(1.9);
+    setZoom(1.34);
     if (point) {
-      setPan({ x: MAP_WIDTH / 2 - point[0], y: MAP_HEIGHT / 2 - point[1] });
+      setPan(calculateConnectedPan(point));
     }
   };
 
@@ -170,6 +192,7 @@ export const LearningMuseumSection = () => {
               <div>
                 <p className="font-cinzel text-[0.65rem] tracking-[0.28em] uppercase text-primary mb-1">Real Geographic Map</p>
                 <h3 className="font-playfair text-2xl font-bold">Peta Wilayah Aceh</h3>
+                <p className="mt-1 text-xs text-muted-foreground">GeoJSON tervalidasi · 23 kabupaten/kota · SVG vektor HD</p>
               </div>
               <div className="flex items-center gap-2">
                 <button onClick={() => setZoom((value) => Math.min(3, value + 0.25))} className="grid h-10 w-10 place-items-center rounded-lg border border-border bg-background text-foreground transition-colors hover:bg-accent" aria-label="Perbesar peta">
@@ -196,7 +219,7 @@ export const LearningMuseumSection = () => {
                 }}
               >
                 <rect width={MAP_WIDTH} height={MAP_HEIGHT} fill="hsl(var(--accent))" />
-                <motion.g animate={{ scale: zoom, x: pan.x, y: pan.y }} transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }} style={{ transformOrigin: "center" }}>
+                <motion.g animate={{ scale: zoom, x: pan.x, y: pan.y }} transition={mapTransition} style={{ transformOrigin: "center" }}>
                   <path d={routePath} fill="none" stroke="hsl(var(--maroon))" strokeWidth="3" strokeDasharray="9 10" opacity="0.45" strokeLinecap="round" />
                   {mapData.features.map((feature) => {
                     const region = feature.properties.shapeName;
@@ -223,7 +246,7 @@ export const LearningMuseumSection = () => {
                     );
                   })}
                   {events.map((item) => {
-                    const point = regionCentroids.get(item.region);
+                    const point = eventPoints.get(item.id) || regionCentroids.get(item.region);
                     if (!point) return null;
                     const isActive = item.id === activeEvent.id;
                     return (
