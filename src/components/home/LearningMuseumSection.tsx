@@ -269,7 +269,9 @@ export const LearningMuseumSection = () => {
                   <button
                     key={item.id}
                     data-event={item.id}
-                    ref={(node) => (timelineRefs.current[item.id] = node)}
+                    ref={(node) => {
+                      timelineRefs.current[item.id] = node;
+                    }}
                     onClick={() => focusEvent(item)}
                     className={`w-full rounded-xl border p-4 text-left transition-all duration-300 ${isActive ? "border-maroon bg-accent shadow-card" : "border-border bg-background hover:bg-accent/70"}`}
                   >
