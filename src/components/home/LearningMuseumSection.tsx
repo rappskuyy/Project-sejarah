@@ -77,7 +77,7 @@ const materials = [
 ];
 
 const missions = ["Telusuri peta Aceh", "Klik timeline sejarah", "Baca materi cepat", "Uji pemahaman di game"];
-const mapData = acehGeoJson as { type: "FeatureCollection"; features: GeoFeature[] };
+const mapData = acehGeoJson as unknown as { type: "FeatureCollection"; features: GeoFeature[] };
 const MAP_WIDTH = 760;
 const MAP_HEIGHT = 520;
 
