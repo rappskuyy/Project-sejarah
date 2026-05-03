@@ -72,7 +72,7 @@ const events: HistoricalEvent[] = [
 const materials = [
   { icon: BookOpen, title: "Biografi Tokoh", text: "Latar keluarga, masa muda, dan perubahan hidup Cut Nyak Dien serta Teuku Umar.", to: "/cut-nyak-dien" },
   { icon: Shield, title: "Strategi Perang", text: "Gerilya, penguasaan medan, penyamaran, dan cara membangun kepercayaan rakyat.", to: "/perbandingan" },
-  { icon: Target, title: "Lokasi Penting", text: "Banda Aceh, Lampadang, Meulaboh, Gle Tarum, dan pedalaman Aceh dalam alur sejarah.", to: "/teuku-umar" },
+  { icon: MapPin, title: "Peta Wilayah Aceh", text: "Pelajari batas kabupaten/kota Aceh, lokasi sejarah, dan rute perjuangan melalui peta interaktif.", to: "/teuku-umar" },
   { icon: Sparkles, title: "Fakta Cepat", text: "Ringkasan tanggal, tempat, nilai perjuangan, dan istilah penting untuk persiapan quiz.", to: "/game" },
 ];
 
@@ -87,7 +87,6 @@ export const LearningMuseumSection = () => {
   const [selectedRegion, setSelectedRegion] = useState<string | null>(events[0].region);
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
-  const timelineRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const reduceMotion = useReducedMotion();
 
   const { path, regionCentroids, eventPoints, routePath } = useMemo(() => {
@@ -147,24 +146,6 @@ export const LearningMuseumSection = () => {
     setSelectedRegion(activeEvent.region);
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.find((entry) => entry.isIntersecting);
-        if (!visible) return;
-        const event = events.find((item) => item.id === visible.target.getAttribute("data-event"));
-        if (event) {
-          setActiveEvent(event);
-          setSelectedRegion(event.region);
-        }
-      },
-      { rootMargin: "-35% 0px -45% 0px", threshold: 0.45 },
-    );
-
-    Object.values(timelineRefs.current).forEach((node) => node && observer.observe(node));
-    return () => observer.disconnect();
-  }, []);
-
   const activeRegionEvent = events.find((item) => item.region === (hoveredRegion || selectedRegion));
 
   return (
@@ -219,21 +200,25 @@ export const LearningMuseumSection = () => {
                 }}
               >
                 <rect width={MAP_WIDTH} height={MAP_HEIGHT} fill="hsl(var(--accent))" />
-                <motion.g animate={{ scale: zoom, x: pan.x, y: pan.y }} transition={mapTransition} style={{ transformOrigin: "center" }}>
-                  <path d={routePath} fill="none" stroke="hsl(var(--maroon))" strokeWidth="3" strokeDasharray="9 10" opacity="0.45" strokeLinecap="round" />
+                <motion.g animate={{ scale: zoom, x: pan.x, y: pan.y }} transition={mapTransition} style={{ transformOrigin: "center", transformBox: 'fill-box' }}>
+                  <path d={routePath} fill="none" stroke="hsl(var(--maroon-dark))" strokeWidth="3" strokeDasharray="9 10" opacity="0.55" strokeLinecap="round" />
                   {mapData.features.map((feature) => {
                     const region = feature.properties.shapeName;
                     const isActive = region === activeEvent.region || region === selectedRegion;
                     const isHovered = region === hoveredRegion;
                     return (
                       <motion.path
-                        key={region}
+                        key={`${region}-${feature.geometry.type}`}
                         d={path(feature as never) || ""}
-                        fill={isActive || isHovered ? "hsl(var(--maroon))" : "hsl(var(--card))"}
-                        stroke="hsl(var(--border))"
-                        strokeWidth={isActive || isHovered ? 1.8 : 0.8}
-                        opacity={isActive ? 0.92 : isHovered ? 0.78 : 0.96}
-                        className="outline-none transition-colors duration-300"
+                        fill={isActive ? "hsl(var(--maroon) / 0.22)" : isHovered ? "hsl(var(--maroon) / 0.16)" : "hsl(var(--maroon) / 0.08)"}
+                        stroke={isActive || isHovered ? "hsl(var(--maroon-dark))" : "hsl(var(--maroon-dark) / 0.45)"}
+                        fillRule="evenodd"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
+                        strokeWidth={isActive || isHovered ? 1.6 : 0.95}
+                        opacity={isActive ? 0.98 : isHovered ? 0.88 : 0.96}
+                        className="outline-none transition-all duration-300"
+                        style={{ cursor: "pointer" }}
                         onMouseEnter={() => setHoveredRegion(region)}
                         onMouseLeave={() => setHoveredRegion(null)}
                         onClick={() => {
@@ -291,10 +276,6 @@ export const LearningMuseumSection = () => {
                 return (
                   <button
                     key={item.id}
-                    data-event={item.id}
-                    ref={(node) => {
-                      timelineRefs.current[item.id] = node;
-                    }}
                     onClick={() => focusEvent(item)}
                     className={`w-full rounded-xl border p-4 text-left transition-all duration-300 ${isActive ? "border-maroon bg-accent shadow-card" : "border-border bg-background hover:bg-accent/70"}`}
                   >

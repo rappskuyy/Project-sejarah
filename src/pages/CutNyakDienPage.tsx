@@ -8,6 +8,8 @@ import { FactsSection } from "@/components/biography/FactsSection";
 import { LegacySection } from "@/components/biography/LegacySection";
 import { StrategySection } from "@/components/biography/StrategySection";
 import { GallerySection } from "@/components/biography/GallerySection";
+import { ColonialDocuments } from "@/components/biography/ColonialDocuments";
+import { WarMap } from "@/components/biography/WarMap";
 import { CtaSection } from "@/components/biography/CtaSection";
 
 const CutNyakDienPage = () => {
@@ -21,6 +23,8 @@ const CutNyakDienPage = () => {
       <TimelineSection hero={hero} />
       <QuoteStatsSection hero={hero} />
       <FactsSection hero={hero} />
+      <ColonialDocuments />
+      <WarMap />
       <LegacySection hero={hero} />
       <StrategySection hero={hero} />
       <GallerySection hero={hero} />

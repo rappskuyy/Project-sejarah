@@ -9,6 +9,8 @@ import { LegacySection } from "@/components/biography/LegacySection";
 import { StrategySection } from "@/components/biography/StrategySection";
 import { GallerySection } from "@/components/biography/GallerySection";
 import { CtaSection } from "@/components/biography/CtaSection";
+import { ColonialDocuments } from "@/components/biography/ColonialDocuments";
+import { WarMap } from "@/components/biography/WarMap";
 
 const TeukuUmarPage = () => {
   useEffect(() => {
@@ -21,6 +23,8 @@ const TeukuUmarPage = () => {
       <TimelineSection hero={hero} />
       <QuoteStatsSection hero={hero} />
       <FactsSection hero={hero} />
+      <ColonialDocuments />
+      <WarMap />
       <LegacySection hero={hero} />
       <StrategySection hero={hero} />
       <GallerySection hero={hero} />
