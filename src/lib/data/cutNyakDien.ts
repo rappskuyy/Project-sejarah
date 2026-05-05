@@ -7,7 +7,7 @@ import g3 from "@/assets/gallery-tomb.jpg";
 import g4 from "@/assets/gallery-coast.jpg";
 
 export const cutNyakDienData: HeroData = {
-  slug: "cut-nyak-dien",
+  slug: "cut nyak dien",
   name: "Cut Nyak Dien",
   title: "Srikandi Pejuang",
   subtitle: "Srikandi Aceh yang Tak Pernah Menyerah",
@@ -16,7 +16,7 @@ export const cutNyakDienData: HeroData = {
   birthPlace: "Lampadang, Aceh Besar",
   fightingStyle: "Perlawanan Moral & Spiritual",
   mainWeapon: "Semangat & Keteguhan",
-  quote: "Mati di tangan musuh lebih terhormat daripada hidup di bawah penindasan mereka.",
+  quote: "Mata uloen hitam bah jeut keu puteh kafe paleh han loen tem kalon rupa",
   colorTheme: "gold",
   portrait,
   heroBg,
@@ -27,20 +27,19 @@ export const cutNyakDienData: HeroData = {
     { label: "Semangat Juang", value: 100 },
   ],
   shortBio:
-    "Cut Nyak Dien adalah pahlawan nasional Indonesia dari Aceh yang berjuang melawan penjajahan Belanda dengan penuh semangat dan keberanian. Meski mengalami berbagai kesedihan dan penyakit, ia tidak pernah menyerah dalam perjuangannya untuk kemerdekaan tanah Aceh tercinta.",
+    "Cut Nyak Dien adalah seorang pemimpin pasukan gerilya Aceh selama Perang Aceh. Setelah kematian suaminya, Teuku Umar, ia memimpin aksi gerilya melawan Belanda selama 25 tahun. Ia dianugerahi gelar Pahlawan Nasional Indonesia secara anumerta pada 2 Mei 1964 oleh pemerintah Indonesia.",
   longBio: [
-    "Cut Nyak Dien lahir sekitar tahun 1848 di Lampadang, Aceh Besar, dari keluarga bangsawan yang terpandang. Ayahnya, Teuku Nanta Setia, adalah seorang uleebalang (pemimpin adat) yang disegani di wilayah VI Mukim. Sejak kecil, Cut Nyak Dien tumbuh dalam lingkungan yang menjunjung tinggi nilai keislaman, adat istiadat Aceh, dan semangat cinta tanah air yang kuat. Pendidikan agama dan budaya yang ia terima sejak dini membentuk karakter baja yang kelak menjadi pijakan perjuangannya.",
-    "Pada usia muda, ia menikah dengan Teuku Ibrahim Lamnga, seorang bangsawan dan pejuang Aceh. Pernikahan itu melahirkan kebahagiaan yang singkat, karena pada tahun 1873, invasi besar-besaran Belanda ke Aceh mengubah segalanya. Teuku Ibrahim Lamnga gugur dalam pertempuran dahsyat di Gle Tarum pada 1878. Kehilangan suami tidak membuat Cut Nyak Dien patah semangat — sebaliknya, api perlawanannya semakin berkobar. Ia menolak semua tawaran Belanda untuk hidup damai dan justru memilih melanjutkan perjuangan.",
-    "Dalam masa berkabung itulah Teuku Umar, panglima perang Aceh yang legendaris, melamarnya. Pada tahun 1880, Cut Nyak Dien menerima lamaran tersebut — bukan hanya karena ikatan batin, tetapi juga karena keyakinannya bahwa bersama Teuku Umar, perjuangan melawan Belanda akan semakin kuat. Pasangan ini menjadi simbol perlawanan yang paling disegani di seluruh Aceh. Mereka memimpin pasukan gerilya dari pedalaman hutan, melancarkan serangan-serangan mengejutkan yang membuat Belanda terus kewalahan selama bertahun-tahun.",
-    "Namun cobaan demi cobaan terus berdatangan. Pada 1896, Teuku Umar gugur dalam pertempuran di Meulaboh. Cut Nyak Dien, yang sudah mulai mengidap rematik parah dan rabun mata akibat kehidupan keras di hutan, tetap memimpin perlawanan. Pada 1905, ia akhirnya tertangkap karena pengkhianatan dan diasingkan ke Sumedang, Jawa Barat. Di sanalah ia wafat pada tahun 1908 dengan penuh kemuliaan. Pada 2 Mei 1964, ia ditetapkan sebagai Pahlawan Nasional Indonesia oleh Presiden Soekarno.",
+    "Kehidupan Awal dan Awal Mula Perlawanan\n\nCut Nyak Dhien lahir pada tahun 1848 di Aceh Besar dari keturunan keluarga bangsawan yang sangat taat beragama. Pada usia 12 tahun, ia dinikahkan dengan Teuku Cek Ibrahim Lamnga. Ketika Perang Aceh meletus pada tahun 1873 akibat agresi Belanda yang membakar Masjid Raya Baiturrahman, suaminya ikut maju ke garis depan. Gugurnya Ibrahim Lamnga pada tahun 1878 memicu kemarahan mendalam dalam diri Cut Nyak Dhien, membuatnya bersumpah untuk menghancurkan Belanda dan mendedikasikan seluruh hidupnya demi melawan penjajahan.",
+    "Perjuangan Gerilya dan Penangkapan\n\nUntuk melanjutkan perjuangan, ia menikah lagi dengan tokoh pejuang Aceh, Teuku Umar, pada tahun 1880. Bersama-sama, mereka mengobarkan perang gerilya yang sangat menyulitkan Belanda, termasuk saat Teuku Umar menggunakan taktik berpura-pura menyerah untuk merampas senjata dan amunisi musuh. Setelah Teuku Umar gugur pada tahun 1899, Cut Nyak Dhien yang semakin menua tetap memimpin pasukan kecilnya di pedalaman Meulaboh. Kondisi fisiknya yang menurun, menderita rabun dan encok, membuat salah satu anak buahnya yang bernama Pang Laot merasa iba dan akhirnya melaporkan lokasi markas mereka, yang berujung pada penangkapan Cut Nyak Dhien oleh Belanda pada tahun 1901.",
+    "Pengasingan, Wafat, dan Penghargaan\n\nPasca penangkapannya, Belanda mengasingkan Cut Nyak Dhien ke Sumedang, Jawa Barat, dengan tujuan memutus pengaruh dan semangat perlawanannya dari sisa-sisa pejuang di Aceh. Di tanah pengasingan, identitas aslinya ditutupi oleh Belanda, sehingga masyarakat setempat hanya mengenalnya sebagai \"Ibu Perbu\" yang dihormati karena pengetahuannya yang luas dalam agama Islam dan perannya sebagai guru mengaji. Ia wafat pada 6 November 1908 dan makamnya baru ditemukan secara resmi pada tahun 1959. Atas dedikasinya yang tak kenal lelah, Presiden Soekarno menetapkan Cut Nyak Dhien sebagai Pahlawan Nasional Indonesia pada tahun 1964, dan kisah kepahlawanannya terus dikenang hingga kini melalui berbagai karya seni seperti film dan teater.",
   ],
   uniqueFacts: [
-    { icon: "Sword", title: "Pejuang Sejati", desc: "Terus berjuang meski menderita rematik & rabun mata akibat kehidupan berat di hutan selama bertahun-tahun." },
-    { icon: "Heart", title: "Cinta Tanah Air", desc: "Menolak semua tawaran kehidupan nyaman oleh Belanda dan memilih hidup susah demi mempertahankan prinsip dan cinta pada Aceh." },
-    { icon: "Award", title: "Pahlawan Nasional", desc: "Ditetapkan sebagai Pahlawan Nasional Indonesia pada 2 Mei 1964, menjadikannya simbol keberanian dan keteguhan wanita Indonesia." },
-    { icon: "BookOpen", title: "Inspirasi Generasi", desc: "Kisah heroiknya diabadikan dalam film 'Cut Nyak Dien' (1988) yang dibintangi Christine Hakim, meraih penghargaan internasional." },
-    { icon: "MapPin", title: "Makam di Sumedang", desc: "Makam Cut Nyak Dien berada di Sumedang, Jawa Barat. Kini menjadi situs bersejarah yang banyak dikunjungi untuk mengenang jasa-jasanya." },
-    { icon: "Shield", title: "Strategi Gerilya", desc: "Bersama Teuku Umar, Cut Nyak Dien mengembangkan taktik perang gerilya yang sangat efektif sehingga membuat Belanda kewalahan selama puluhan tahun." },
+    { icon: "Sword", title: "Memiliki Garis Keturunan Minangkabau", desc: "Meskipun dikenal sebagai simbol pahlawan perempuan Aceh, Cut Nyak Dhien rupanya masih memiliki darah keturunan Minangkabau dari pihak ayahnya." },
+    { icon: "Heart", title: "Syarat Menikah Harus Berperang", desc: "Setelah suami pertamanya gugur, ia bersedia menerima lamaran Teuku Umar dengan satu syarat mutlak yang harus dipenuhi. Syarat tersebut adalah Teuku Umar harus mengizinkan dan memfasilitasinya untuk ikut bertempur langsung di medan perang melawan penjajah." },
+    { icon: "Award", title: "Pantang Menangisi Syuhada", desc: "Ketika Teuku Umar gugur pada tahun 1899, putrinya yang bernama Cut Gambang menangis histeris meratapi kepergian sang ayah. Cut Nyak Dhien justru menampar putrinya tersebut dan mengingatkan bahwa perempuan Aceh pantang menangisi seseorang yang telah mati syahid." },
+    { icon: "BookOpen", title: "Dikhianati Akibat Rasa Iba", desc: "Pang Laot yang merupakan anak buah kepercayaannya terpaksa membocorkan lokasi persembunyian mereka kepada Belanda karena rasa kasihan. Ia tidak tega melihat kondisi Cut Nyak Dhien yang semakin tua, menderita encok parah, rabun, dan kekurangan makanan di hutan." },
+    { icon: "MapPin", title: "Misteri Makam 50 Tahun", desc: "Letak makam Cut Nyak Dhien sempat menjadi misteri selama puluhan tahun akibat identitasnya yang dirahasiakan oleh Belanda saat ia wafat pada 1908." },
+    { icon: "Shield", title: 'Julukan "Ibu Perbu"', desc: "Saat diasingkan ke Jawa Barat, Belanda sengaja merahasiakan identitas aslinya dari masyarakat setempat agar tidak memicu pemberontakan baru." },
   ],
   timeline: [
     { year: 1848, side: "left", title: "Kelahiran di Lampadang", desc: "Cut Nyak Dien lahir di Lampadang, Aceh Besar. Ia adalah putri dari keluarga bangsawan Aceh yang terpandang. Sejak kecil, ia dididik dengan nilai-nilai keislaman yang kuat dan kecintaan pada tanah air Aceh." },
@@ -48,7 +47,7 @@ export const cutNyakDienData: HeroData = {
     { year: 1873, side: "left", title: "Perang Aceh Dimulai", desc: "Invasi besar-besaran Belanda ke Aceh mengubah segalanya. Cut Nyak Dien terlibat aktif dalam perlawanan bersama suaminya, mengangkat senjata demi kedaulatan tanah Aceh." },
     { year: 1878, side: "right", title: "Suami Pertama Gugur", desc: "Teuku Ibrahim Lamnga gugur dalam pertempuran di Gle Tarum. Kehilangan ini justru memperkuat tekadnya untuk terus berjuang melawan Belanda." },
     { year: 1880, side: "left", title: "Menikah dengan Teuku Umar", desc: "Cut Nyak Dien menerima lamaran Teuku Umar, panglima perang legendaris. Mereka bersatu untuk memperkuat perlawanan rakyat Aceh." },
-    { year: 1896, side: "right", title: "Teuku Umar Gugur", desc: "Teuku Umar gugur di Meulaboh — cobaan terberat. Meski tubuhnya mulai sakit, semangatnya tidak pernah padam." },
+    { year: 1899, side: "right", title: "Teuku Umar Gugur", desc: "Teuku Umar gugur tertembak dalam pertempuran di Meulaboh. Meski kembali kehilangan sosok suami, Cut Nyak Dhien pantang menyerah dan mengambil alih komando untuk terus melanjutkan perang gerilya." },
     { year: 1905, side: "left", title: "Ditangkap Belanda", desc: "Setelah perjuangan panjang, ia akhirnya tertangkap karena pengkhianatan dan diasingkan ke Sumedang, Jawa Barat." },
     { year: 1908, side: "right", title: "Wafat di Sumedang", desc: "Wafat dengan penuh kemuliaan di Sumedang. Namanya abadi sebagai simbol perlawanan dan keteguhan wanita Aceh." },
   ],
@@ -73,9 +72,9 @@ export const cutNyakDienData: HeroData = {
     { title: "Pesisir Aceh", category: "Tanah Leluhur", image: g4 },
   ],
   heroStats: [
-    { value: "60+", label: "Tahun Usia Berjuang" },
-    { value: "26", label: "Tahun Perang Aceh" },
+    { value: "57", label: "Tahun Usia Berjuang" },
+    { value: "31", label: "Tahun Perang Aceh" },
     { value: "1964", label: "Pahlawan Nasional" },
-    { value: "∞", label: "Warisan Inspirasi" },
+    { value: "6", label: "Anak yang Gugur" },
   ],
 };
