@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import heroBg from "@/assets/aceh-panorama.jpg";
+import heroBg from "@/assets/perang1.jpg";
 
 export const HeroSection = () => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

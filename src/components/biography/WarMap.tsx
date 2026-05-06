@@ -72,11 +72,11 @@ export function WarMap() {
       </div>
 
       {/* Grid: Peta kiri + Panel kanan */}
-      <div className="grid grid-cols-[1.4fr_1fr] gap-5 max-w-5xl mx-auto">
+      <div className="grid grid-cols-[1.4fr_1fr] gap-5 max-w-6xl mx-auto">
 
         {/* Peta Leaflet */}
         <div className="relative rounded-2xl overflow-hidden border
-          border-[#C8B89A] min-h-[360px] bg-[#D4E8D8]">
+          border-[#C8B89A] h-[500px] bg-[#D4E8D8] z-0">
           <MapInner
             locations={filtered}
             activeId={activeId}

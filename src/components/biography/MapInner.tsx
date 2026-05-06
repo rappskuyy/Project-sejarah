@@ -36,9 +36,10 @@ export default function MapInner({
     <MapContainer
       center={[5.0, 96.5]}
       zoom={7}
-      style={{ width: '100%', height: '360px' }}
+      style={{ width: '100%', height: '100%' }}
       zoomControl={false}
-      attributionControl={true}
+      attributionControl={false}
+      className="leaflet-container-custom"
     >
       <TileLayer
         url={TILE_URL}
