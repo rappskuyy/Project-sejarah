@@ -7,7 +7,7 @@ import g3 from "@/assets/gallery-village.jpg";
 import g4 from "@/assets/gallery-tomb.jpg";
 
 export const teukuUmarData: HeroData = {
-  slug: "teuku-umar",
+  slug: "teuku umar",
   name: "Teuku Umar",
   title: "Panglima Perang",
   subtitle: "Panglima Strategi yang Tak Tertandingi",
@@ -16,7 +16,7 @@ export const teukuUmarData: HeroData = {
   birthPlace: "Meulaboh, Aceh Barat",
   fightingStyle: "Perang Gerilya & Intelijen",
   mainWeapon: "Strategi & Kecerdikan",
-  quote: "Biarkan mereka pikir kita menyerah, karena itulah senjata kita yang paling tajam.",
+  quote: "Beungoh singoh geutanyoe jep kupi di keude Meulaboh atawa ulon akan syahid",
   colorTheme: "maroon",
   portrait,
   heroBg,
@@ -27,16 +27,16 @@ export const teukuUmarData: HeroData = {
     { label: "Taktik Intelijen", value: 100 },
   ],
   shortBio:
-    "Teuku Umar adalah panglima perang legendaris Aceh yang dikenal karena kecerdikan strateginya yang luar biasa dalam melawan penjajahan Belanda. Taktik genius pura-pura menyerahnya berhasil melumpuhkan ratusan serdadu Belanda.",
+    "Teuku Umar (1854 – 1 Februari 1899) adalah seorang pemimpin gerilya melawan Belanda di Aceh selama Perang Aceh. Ia meninggal saat pasukan Belanda melancarkan serangan mendadak di Meulaboh. Jenazahnya dimakamkan di daerah Mugo Cut. ",
   longBio: [
-    "Teuku Umar lahir pada tahun 1854 di Meulaboh, Aceh Barat. Sejak muda ia dikenal sebagai pemuda cerdas, pemberani, dan memiliki naluri kepemimpinan yang kuat. Tumbuh di tengah keluarga uleebalang, ia dididik dengan nilai keislaman, kecakapan bela diri, dan strategi peperangan tradisional Aceh. Karakter dan kecerdasannya yang menonjol sejak dini menjadikannya panutan bagi para pemuda di kampungnya.",
-    "Ketika Perang Aceh meletus pada 1873, Teuku Umar segera bergabung dengan barisan perlawanan. Ia memperlihatkan kecakapan luar biasa dalam memimpin pasukan kecil dan memenangkan banyak pertempuran melawan Belanda. Reputasinya melesat hingga menjadi panglima yang disegani kawan dan musuh. Pada 1880, ia menikahi Cut Nyak Dien, membentuk pasangan paling legendaris dalam sejarah Aceh.",
-    "Strategi paling brilian Teuku Umar terjadi pada 1883: ia berpura-pura menyerah kepada Belanda. Selama bertahun-tahun ia 'bekerja' untuk Belanda, mendapatkan kepercayaan, pangkat, dan akses ke gudang senjata. Pada 1884, ia berhasil mengumpulkan lebih dari 800 senapan dan 17 meriam — lalu kembali ke pihak Aceh untuk melawan Belanda dengan senjata mereka sendiri. Peristiwa ini dikenal sebagai 'Het Verraad van Teukoe Oemar' (Pengkhianatan Teuku Umar) dan menjadi salah satu strategi militer paling cerdik dalam sejarah perang kolonial.",
-    "Setelah kembali ke barisan perlawanan, Teuku Umar memimpin serangan demi serangan yang menghancurkan moral pasukan Belanda. Sayangnya, pada 11 Februari 1899, ia gugur secara heroik di tanah kelahirannya, Meulaboh, dalam pertempuran melawan pasukan Belanda yang dipimpin Letnan Veltman. Kepergiannya menjadi pukulan berat bagi Cut Nyak Dien, namun warisan strateginya terus hidup menginspirasi taktik militer modern Indonesia.",
+    "Teuku Umar adalah pahlawan nasional asal Meulaboh, Aceh, yang dikenal karena kecerdasan dan keberaniannya dalam melawan penjajah Belanda sejak usia muda. Meskipun tidak mengenyam pendidikan formal, ia memiliki kemampuan kepemimpinan yang luar biasa dan strategi perang yang mumpuni. Perjuangannya semakin kuat setelah ia menikah dengan Cut Nyak Dhien pada tahun 1880, di mana keduanya bahu-membahu menggerakkan perlawanan rakyat Aceh untuk menyerang pos-pos pertahanan Belanda.",
+    "Ciri khas perjuangan Teuku Umar terletak pada taktik \"pura-pura menyerah\" yang ia lakukan berkali-kali untuk mengelabui musuh. Ia sempat bergabung dengan dinas militer Belanda dan mendapatkan gelar Teuku Johan Pahlawan demi memperoleh logistik, senjata, dan kepercayaan dari pihak kolonial. Namun, setelah berhasil mengumpulkan kekuatan dan persenjataan yang cukup, ia selalu kembali memihak rakyat Aceh. Salah satu aksi heroiknya adalah membawa lari ratusan pucuk senjata dan amunisi milik Belanda pada tahun 1896 untuk memperkuat tentara Aceh di bawah satu komando.",
+    "Perjuangan gigih Teuku Umar berakhir pada 11 Februari 1899 dalam sebuah pertempuran sengit di pinggiran kota Meulaboh. Beliau gugur setelah terkena tembakan pasukan Marsose Belanda yang telah mengintai kedatangannya melalui informasi dari mata-mata. Meski telah tiada, semangat perlawanannya diteruskan oleh Cut Nyak Dhien. Atas jasa-jasanya yang besar bagi kemerdekaan Indonesia, namanya kini diabadikan sebagai Pahlawan Nasional, nama jalan di berbagai kota, hingga nama universitas dan kapal perang TNI AL.",
+    
   ],
   uniqueFacts: [
     { icon: "Eye", title: "Master Intelijen", desc: "Berpura-pura menyerah ke Belanda selama bertahun-tahun untuk mengumpulkan informasi dan senjata." },
-    { icon: "Sword", title: "Penakluk Senjata", desc: "Berhasil dapatkan 800 senapan dan 17 meriam dari Belanda — salah satu pencurian senjata terbesar dalam sejarah perang kolonial." },
+    { icon: "Sword", title: "Penakluk Senjata", desc: "Berhasil dapatkan 800 senapan dan 17 meriam dari Belanda salah satu pencurian senjata terbesar dalam sejarah perang kolonial." },
     { icon: "Skull", title: "Gugur di Meulaboh", desc: "Gugur secara heroik dalam pertempuran di Meulaboh pada 11 Februari 1899 di tanah kelahirannya sendiri." },
     { icon: "Building", title: "Nama Abadi", desc: "Namanya diabadikan di jalan utama Jakarta dan kota-kota besar di seluruh Indonesia." },
     { icon: "Award", title: "Pahlawan Nasional", desc: "Ditetapkan sebagai Pahlawan Nasional Republik Indonesia atas jasa-jasa besarnya melawan penjajah." },
@@ -75,6 +75,6 @@ export const teukuUmarData: HeroData = {
     { value: "45", label: "Tahun Usia Berjuang" },
     { value: "800+", label: "Senjata Direbut" },
     { value: "17", label: "Meriam Direbut" },
-    { value: "∞", label: "Warisan Strategi" },
+    { value: "10+", label: "Daerah Terpadu" },
   ],
 };

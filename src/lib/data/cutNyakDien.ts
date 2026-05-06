@@ -52,12 +52,12 @@ export const cutNyakDienData: HeroData = {
     { year: 1908, side: "right", title: "Wafat di Sumedang", desc: "Wafat dengan penuh kemuliaan di Sumedang. Namanya abadi sebagai simbol perlawanan dan keteguhan wanita Aceh." },
   ],
   legacy: [
-    { icon: "Film", category: "Film Nasional (1988)", title: "Film Nasional", desc: 'Film epik "Cut Nyak Dien" dibintangi Christine Hakim meraih penghargaan di Festival Film Asia Pasifik dan menjadi film sejarah terbaik Indonesia.' },
-    { icon: "DollarSign", category: "Uang Kertas", title: "Uang Kertas", desc: "Wajah Cut Nyak Dien pernah diabadikan dalam uang kertas Rupiah sebagai penghargaan atas pengorbanan dan jasa-jasanya untuk bangsa." },
-    { icon: "MapPin", category: "Makam Bersejarah", title: "Makam Bersejarah", desc: "Makam Cut Nyak Dien di Sumedang menjadi situs ziarah nasional yang ramai dikunjungi setiap tahun, terutama pada Hari Pahlawan 10 November." },
-    { icon: "Building2", category: "Nama Jalan & Institusi", title: "Nama Jalan", desc: "Nama Cut Nyak Dien diabadikan di ratusan nama jalan, sekolah, rumah sakit, dan institusi di seluruh Indonesia sebagai penghormatan abadi." },
-    { icon: "Award", category: "Pahlawan Nasional 1964", title: "Pahlawan Nasional", desc: "Ditetapkan resmi oleh Presiden Soekarno melalui Keppres No. 106 Tahun 1964 sebagai Pahlawan Nasional Republik Indonesia." },
-    { icon: "BookOpen", category: "Kurikulum Nasional", title: "Kurikulum Nasional", desc: "Kisah perjuangan Cut Nyak Dien masuk dalam kurikulum pendidikan nasional Indonesia, menginspirasi jutaan generasi penerus bangsa." },
+    { icon: "Film", category: "Film Nasional (1988)", title: "Film Nasional", desc: 'Film "Tjoet Nja Dhien" (1988) yang dibintangi Christine Hakim adalah salah satu film sejarah terbaik Indonesia. Film ini memenangkan banyak Piala Citra dan menjadi film Indonesia pertama yang ditayangkan di Festival Film Cannes.' },
+    { icon: "DollarSign", category: "Uang Kertas", title: "Uang Kertas", desc: "Wajah Cut Nyak Dhien pernah diabadikan dalam uang kertas Rupiah, yaitu pada pecahan Rp10.000 emisi tahun 1998." },
+    { icon: "MapPin", category: "Makam Bersejarah", title: "Makam Bersejarah", desc: "Cut Nyak Dhien wafat dalam pengasingan di Sumedang, Jawa Barat. Makamnya di Gunung Puyuh, Sumedang, kini menjadi situs ziarah nasional yang penting." },
+    { icon: "Building2", category: "Nama Jalan", title: "Nama Jalan", desc: "Nama Cut Nyak Dien diabadikan di ratusan nama jalan, sekolah, rumah sakit, dan institusi di seluruh Indonesia sebagai penghormatan abadi, seperti Jalan Cut Nyak Dhien di Menteng, Jakarta Pusat." },
+    { icon: "Award", category: "Pahlawan Nasional 1964", title: "Pahlawan Nasional", desc: "Ia ditetapkan sebagai Pahlawan Nasional Indonesia melalui Keppres No. 106 Tahun 1964 pada masa pemerintahan Presiden Soekarno." },
+    { icon: "BookOpen", category: "Kurikulum Nasional", title: "Kurikulum Nasional", desc: "Kisah perjuangan Cut Nyak Dien masuk dalam kurikulum pendidikan nasional Indonesia, menginspirasi jutaan generasi penerus bangsa, seperti dalam buku pelajaran sejarah kelas XI, dari bab \"Perlawanan Terhadap Kolonialisme Belanda\"." },
   ],
   strategies: [
     { title: "Perang Gerilya Hutan", desc: "Berpindah-pindah di hutan rimba Aceh untuk menghindari kejaran Belanda dan melancarkan serangan kejutan.", effectiveness: 92 },

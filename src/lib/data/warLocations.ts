@@ -1,5 +1,5 @@
-export type HeroFilter = 'all' | 'cut-nyak-dien' | 'teuku-umar'
-export type LocationType = 'ibu-kota' | 'tempat-lahir' | 'pertempuran' | 'strategi' | 'pengasingan'
+export type HeroFilter = 'all' | 'cut nyak dien' | 'teuku umar'
+export type LocationType = 'ibu-kota' | 'tempat lahir' | 'pertempuran' | 'strategi' | 'pengasingan'
 
 export interface WarLocation {
   id: string
@@ -37,8 +37,8 @@ export const warLocations: WarLocation[] = [
     year: 1848,
     subtitle: '1848 · Tempat Lahir Cut Nyak Dien',
     description: 'Lampadang di Aceh Besar adalah tanah kelahiran Cut Nyak Dien pada tahun 1848. Di sinilah ia tumbuh dalam keluarga bangsawan Aceh yang menjunjung tinggi nilai keislaman dan cinta tanah air.',
-    type: 'tempat-lahir',
-    hero: 'cut-nyak-dien',
+    type: 'tempat lahir',
+    hero: 'cut nyak dien',
     lat: 5.4870,
     lng: 95.3100,
     color: '#E8A020',
@@ -52,7 +52,7 @@ export const warLocations: WarLocation[] = [
     subtitle: '1854 · Tempat Lahir & Gugurnya Teuku Umar',
     description: 'Meulaboh adalah tanah kelahiran sekaligus tempat gugurnya Teuku Umar pada 11 Februari 1899. Di kota inilah sang panglima berjuang hingga titik darah penghabisan melawan pasukan Belanda.',
     type: 'pertempuran',
-    hero: 'teuku-umar',
+    hero: 'teuku umar',
     lat: 4.1408,
     lng: 96.1286,
     color: '#C0392B',
@@ -64,9 +64,9 @@ export const warLocations: WarLocation[] = [
     name: 'Gle Tarum',
     year: 1878,
     subtitle: '1878 · Gugurnya Teuku Ibrahim Lamnga',
-    description: 'Di Gle Tarum pada 1878, suami pertama Cut Nyak Dien — Teuku Ibrahim Lamnga — gugur dalam pertempuran dahsyat melawan Belanda. Peristiwa ini mengubah Cut Nyak Dien dari seorang istri bangsawan menjadi pejuang tangguh.',
+    description: 'Di Gle Tarum pada 1878, suami pertama Cut Nyak Dien yaitu  Teuku Ibrahim Lamnga  gugur dalam pertempuran dahsyat melawan Belanda. Peristiwa ini mengubah Cut Nyak Dien dari seorang istri bangsawan menjadi pejuang tangguh.',
     type: 'pertempuran',
-    hero: 'cut-nyak-dien',
+    hero: 'cut nyak dien',
     lat: 5.4200,
     lng: 95.5800,
     color: '#C0392B',
@@ -94,7 +94,7 @@ export const warLocations: WarLocation[] = [
     subtitle: '1893 · Siasat Pura-Pura Menyerah',
     description: 'Di wilayah Aceh Besar, Teuku Umar melancarkan siasat brillian: berpura-pura menyerah kepada Belanda pada 1893. Ia berhasil mengumpulkan 800 senjata dan 17 meriam sebelum berbalik melawan Belanda pada 1896.',
     type: 'strategi',
-    hero: 'teuku-umar',
+    hero: 'teuku umar',
     lat: 5.5200,
     lng: 95.6500,
     color: '#27AE60',
@@ -108,7 +108,7 @@ export const warLocations: WarLocation[] = [
     subtitle: '1896 · Teuku Umar Berbalik Melawan Belanda',
     description: 'Pada 1896, setelah berhasil mengumpulkan persenjataan besar, Teuku Umar secara resmi berbalik melawan Belanda dari wilayah ini. Belanda yang terkejut menyebut ini sebagai "pengkhianatan terbesar" dalam sejarah kolonial mereka.',
     type: 'pertempuran',
-    hero: 'teuku-umar',
+    hero: 'teuku umar',
     lat: 5.1801,
     lng: 97.1500,
     color: '#C0392B',
@@ -122,7 +122,7 @@ export const warLocations: WarLocation[] = [
     subtitle: '1905 · Pengasingan Cut Nyak Dien',
     description: 'Setelah ditangkap Belanda pada 1905, Cut Nyak Dien diasingkan ke Sumedang, Jawa Barat. Di tanah pengasingan inilah beliau wafat pada 6 November 1908. Makamnya kini menjadi situs ziarah nasional.',
     type: 'pengasingan',
-    hero: 'cut-nyak-dien',
+    hero: 'cut nyak dien',
     lat: -6.8500,
     lng: 107.9200,
     color: '#8E44AD',
@@ -133,7 +133,7 @@ export const warLocations: WarLocation[] = [
 
 export const legendItems = [
   { type: 'ibu-kota', color: '#E8A020', label: 'Ibu Kota' },
-  { type: 'tempat-lahir', color: '#E8A020', label: 'Tempat Lahir' },
+  { type: 'tempat lahir', color: '#E8A020', label: 'Tempat Lahir' },
   { type: 'pertempuran', color: '#C0392B', label: 'Pertempuran' },
   { type: 'strategi', color: '#27AE60', label: 'Strategi' },
   { type: 'pengasingan', color: '#8E44AD', label: 'Pengasingan' },
