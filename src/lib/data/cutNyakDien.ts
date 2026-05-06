@@ -1,14 +1,14 @@
 import type { HeroData } from "@/types";
 import portrait from "@/assets/cutnyakdien.webp";
-import heroBg from "@/assets/aceh-panorama.jpg";
-import g1 from "@/assets/gallery-village.jpg";
-import g2 from "@/assets/gallery-jungle.jpg";
-import g3 from "@/assets/gallery-tomb.jpg";
-import g4 from "@/assets/gallery-coast.jpg";
+import heroBg from "@/assets/bgcutnyakdien.jpg";
+import g1 from "@/assets/Museum_Cut_Nyak_Dhien.jpg";
+import g2 from "@/assets/foto-terakhir-cut-nyak-dien_20170802_130340.webp";
+import g3 from "@/assets/makam-cut-nyak-dien.webp";
+import g4 from "@/assets/antarafoto-bekas-rumah-tinggal-cut-nyak-dien-di-sumedang-150620-rai-3.jpg.webp";
 
 export const cutNyakDienData: HeroData = {
-  slug: "cut nyak dien",
-  name: "Cut Nyak Dien",
+  slug: "cut nyak dhien",
+  name: "Cut Nyak Dhien",
   title: "Srikandi Pejuang",
   subtitle: "Srikandi Aceh yang Tak Pernah Menyerah",
   birthYear: 1848,
@@ -27,7 +27,7 @@ export const cutNyakDienData: HeroData = {
     { label: "Semangat Juang", value: 100 },
   ],
   shortBio:
-    "Cut Nyak Dien adalah seorang pemimpin pasukan gerilya Aceh selama Perang Aceh. Setelah kematian suaminya, Teuku Umar, ia memimpin aksi gerilya melawan Belanda selama 25 tahun. Ia dianugerahi gelar Pahlawan Nasional Indonesia secara anumerta pada 2 Mei 1964 oleh pemerintah Indonesia.",
+    "Cut Nyak Dhien adalah seorang pemimpin pasukan gerilya Aceh selama Perang Aceh. Setelah kematian suaminya, Teuku Umar, ia memimpin aksi gerilya melawan Belanda selama 25 tahun. Ia dianugerahi gelar Pahlawan Nasional Indonesia secara anumerta pada 2 Mei 1964 oleh pemerintah Indonesia.",
   longBio: [
     "Kehidupan Awal dan Awal Mula Perlawanan\n\nCut Nyak Dhien lahir pada tahun 1848 di Aceh Besar dari keturunan keluarga bangsawan yang sangat taat beragama. Pada usia 12 tahun, ia dinikahkan dengan Teuku Cek Ibrahim Lamnga. Ketika Perang Aceh meletus pada tahun 1873 akibat agresi Belanda yang membakar Masjid Raya Baiturrahman, suaminya ikut maju ke garis depan. Gugurnya Ibrahim Lamnga pada tahun 1878 memicu kemarahan mendalam dalam diri Cut Nyak Dhien, membuatnya bersumpah untuk menghancurkan Belanda dan mendedikasikan seluruh hidupnya demi melawan penjajahan.",
     "Perjuangan Gerilya dan Penangkapan\n\nUntuk melanjutkan perjuangan, ia menikah lagi dengan tokoh pejuang Aceh, Teuku Umar, pada tahun 1880. Bersama-sama, mereka mengobarkan perang gerilya yang sangat menyulitkan Belanda, termasuk saat Teuku Umar menggunakan taktik berpura-pura menyerah untuk merampas senjata dan amunisi musuh. Setelah Teuku Umar gugur pada tahun 1899, Cut Nyak Dhien yang semakin menua tetap memimpin pasukan kecilnya di pedalaman Meulaboh. Kondisi fisiknya yang menurun, menderita rabun dan encok, membuat salah satu anak buahnya yang bernama Pang Laot merasa iba dan akhirnya melaporkan lokasi markas mereka, yang berujung pada penangkapan Cut Nyak Dhien oleh Belanda pada tahun 1901.",
@@ -66,10 +66,10 @@ export const cutNyakDienData: HeroData = {
     { title: "Jaringan Dukungan Rakyat", desc: "Membangun solidaritas dan dukungan rakyat Aceh untuk perlawanan jangka panjang.", effectiveness: 90 },
   ],
   gallery: [
-    { title: "Kampung Halaman Aceh", category: "Dokumentasi Sejarah", image: g1 },
-    { title: "Hutan Gerilya Aceh", category: "Medan Pertempuran", image: g2 },
-    { title: "Makam Cut Nyak Dien", category: "Situs Bersejarah", image: g3 },
-    { title: "Pesisir Aceh", category: "Tanah Leluhur", image: g4 },
+    { title: "Museum Rumah Cut Nyak Dhien", category: "Dokumentasi Sejarah", image: g1 },
+    { title: "Foto Terakhir Cut Nyak Dhien Sebelum Meninggal Di Pengasingan", category: "Foto Dokumenter", image: g2 },
+    { title: "Makam Cut Nyak Dhien", category: "Situs Bersejarah", image: g3 },
+    { title: "Isi Dalam Museum Rumah Cut Nyak Dhien", category: "Tanah Leluhur", image: g4 },
   ],
   heroStats: [
     { value: "57", label: "Tahun Usia Berjuang" },

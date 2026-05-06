@@ -1,7 +1,7 @@
 import type { HeroData } from "@/types";
 import portrait from "@/assets/teukuumar.jpg";
 import heroBg from "@/assets/sunset-quote.jpg";
-import g1 from "@/assets/gallery-coast.jpg";
+import g1 from "@/assets/teukuumarteman.jpg";
 import g2 from "@/assets/gallery-jungle.jpg";
 import g3 from "@/assets/gallery-village.jpg";
 import g4 from "@/assets/gallery-tomb.jpg";
