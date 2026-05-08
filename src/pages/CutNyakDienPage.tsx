@@ -11,13 +11,16 @@ import { GallerySection } from "@/components/biography/GallerySection";
 import { ColonialDocuments } from "@/components/biography/ColonialDocuments";
 import { WarMap } from "@/components/biography/WarMap";
 import { CtaSection } from "@/components/biography/CtaSection";
+import { MissionTimer } from "@/components/home/MissionTimer";
 
 const CutNyakDienPage = () => {
   useEffect(() => {
     document.title = `${hero.name} — Pahlawan Aceh`;
   }, []);
+
   return (
     <>
+      <MissionTimer missionKey="biografi" missionLabel="Biografi Tokoh" />
       <BiographyHero hero={hero} />
       <AboutSection hero={hero} />
       <TimelineSection hero={hero} />
@@ -32,4 +35,5 @@ const CutNyakDienPage = () => {
     </>
   );
 };
+
 export default CutNyakDienPage;

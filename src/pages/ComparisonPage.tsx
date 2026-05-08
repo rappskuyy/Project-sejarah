@@ -7,6 +7,7 @@ import { teukuUmarData } from "@/lib/data/teukuUmar";
 import { comparisonRows, similarities } from "@/lib/data/comparison";
 import { cn } from "@/lib/utils";
 import forest from "@/assets/forest-quote.jpg";
+import { MissionTimer } from "@/components/home/MissionTimer";
 
 const Icon = ({ name, className }: { name: string; className?: string }) => {
   const C = (Icons as any)[name] ?? Icons.Star;
@@ -19,6 +20,8 @@ const ComparisonPage = () => {
 
   return (
     <>
+      <MissionTimer missionKey="strategi" missionLabel="Strategi Perang" />
+
       <section className="pt-32 pb-16 bg-background">
         <div className="container text-center max-w-2xl mx-auto">
           <p className="label-eyebrow mb-3">Dua Pahlawan, Satu Tujuan</p>

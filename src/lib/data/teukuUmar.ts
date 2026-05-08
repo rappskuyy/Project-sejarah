@@ -2,7 +2,7 @@ import type { HeroData } from "@/types";
 import portrait from "@/assets/teukuumar.jpg";
 import heroBg from "@/assets/sunset-quote.jpg";
 import g1 from "@/assets/teukuumarteman.jpg";
-import g2 from "@/assets/gallery-jungle.jpg";
+import g2 from "@/assets/makamteukuumar.jpeg";
 import g3 from "@/assets/gallery-village.jpg";
 import g4 from "@/assets/gallery-tomb.jpg";
 
@@ -66,8 +66,8 @@ export const teukuUmarData: HeroData = {
     { title: "Mobilisasi Rakyat", desc: "Menggerakkan seluruh lapisan masyarakat Aceh untuk berjuang bersama-sama.", effectiveness: 93 },
   ],
   gallery: [
-    { title: "Meulaboh, Aceh Barat", category: "Tanah Kelahiran", image: g1 },
-    { title: "Medan Pertempuran", category: "Sejarah Perang", image: g2 },
+    { title: "Teuku Umar Bersama Pengikutnya", category: "Foto Dokumenter", image: g1 },
+    { title: "Makam Teuku Umar", category: "Situs Bersejarah", image: g2 },
     { title: "Strategi Gerilya", category: "Taktik Militer", image: g3 },
     { title: "Warisan Sejarah", category: "Peninggalan Abadi", image: g4 },
   ],

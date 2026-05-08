@@ -3,6 +3,7 @@ import { Trophy, Plane, RotateCcw } from "lucide-react";
 import { PlaneGame } from "@/components/game/PlaneGame";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import { MissionTimer } from "@/components/home/MissionTimer";
 
 interface ScoreRow { id: string; player_name: string; score: number; quiz_correct: number; created_at: string; }
 
@@ -34,6 +35,8 @@ const GamePage = () => {
 
   return (
     <div className="pt-28 pb-20 bg-background min-h-screen">
+      <MissionTimer missionKey="game" missionLabel="Fakta Cepat & Game" />
+
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="label-eyebrow mb-3">Mainkan & Pelajari</p>

@@ -6,6 +6,7 @@ import g2 from "@/assets/foto-terakhir-cut-nyak-dien_20170802_130340.webp";
 import g3 from "@/assets/makam-cut-nyak-dien.webp";
 import g4 from "@/assets/antarafoto-bekas-rumah-tinggal-cut-nyak-dien-di-sumedang-150620-rai-3.jpg.webp";
 
+
 export const cutNyakDienData: HeroData = {
   slug: "cut nyak dhien",
   name: "Cut Nyak Dhien",

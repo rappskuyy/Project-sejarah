@@ -11,6 +11,21 @@ const NotFound = () => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
   }, [location.pathname]);
 
+  // Hide navbar & footer when on 404 page, restore on unmount
+  useEffect(() => {
+    const selectors = ["nav", "header", "footer", "#navbar", "#footer", ".navbar", ".footer", "[data-navbar]", "[data-footer]"];
+    const hidden: HTMLElement[] = [];
+    selectors.forEach((sel) => {
+      document.querySelectorAll<HTMLElement>(sel).forEach((el) => {
+        el.style.display = "none";
+        hidden.push(el);
+      });
+    });
+    return () => {
+      hidden.forEach((el) => (el.style.display = ""));
+    };
+  }, []);
+
   // Parallax mouse tracking
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
