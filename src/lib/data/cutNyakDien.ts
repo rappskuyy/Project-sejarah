@@ -1,6 +1,6 @@
 import type { HeroData } from "@/types";
 import portrait from "@/assets/cutnyakdien.webp";
-import heroBg from "@/assets/bgcutnyakdien.jpg";
+import heroBg from "@/assets/ChatGPT Image 9 Mei 2026, 16.35.07.png";
 import g1 from "@/assets/Museum_Cut_Nyak_Dhien.jpg";
 import g2 from "@/assets/foto-terakhir-cut-nyak-dien_20170802_130340.webp";
 import g3 from "@/assets/makam-cut-nyak-dien.webp";
@@ -43,11 +43,11 @@ export const cutNyakDienData: HeroData = {
     { icon: "Shield", title: 'Julukan "Ibu Perbu"', desc: "Saat diasingkan ke Jawa Barat, Belanda sengaja merahasiakan identitas aslinya dari masyarakat setempat agar tidak memicu pemberontakan baru." },
   ],
   timeline: [
-    { year: 1848, side: "left", title: "Kelahiran di Lampadang", desc: "Cut Nyak Dien lahir di Lampadang, Aceh Besar. Ia adalah putri dari keluarga bangsawan Aceh yang terpandang. Sejak kecil, ia dididik dengan nilai-nilai keislaman yang kuat dan kecintaan pada tanah air Aceh." },
+    { year: 1848, side: "left", title: "Kelahiran di Lampadang", desc: "Cut Nyak Dhien lahir di Lampadang, Aceh Besar. Ia adalah putri dari keluarga bangsawan Aceh yang terpandang. Sejak kecil, ia dididik dengan nilai-nilai keislaman yang kuat dan kecintaan pada tanah air Aceh." },
     { year: 1862, side: "right", title: "Pernikahan Pertama", desc: "Menikah dengan Teuku Ibrahim Lamnga, seorang pejuang Aceh yang gagah berani. Mereka membangun rumah tangga bahagia di tengah situasi politik yang mulai memanas." },
-    { year: 1873, side: "left", title: "Perang Aceh Dimulai", desc: "Invasi besar-besaran Belanda ke Aceh mengubah segalanya. Cut Nyak Dien terlibat aktif dalam perlawanan bersama suaminya, mengangkat senjata demi kedaulatan tanah Aceh." },
+    { year: 1873, side: "left", title: "Perang Aceh Dimulai", desc: "Invasi besar-besaran Belanda ke Aceh mengubah segalanya. Cut Nyak Dhien terlibat aktif dalam perlawanan bersama suaminya, mengangkat senjata demi kedaulatan tanah Aceh." },
     { year: 1878, side: "right", title: "Suami Pertama Gugur", desc: "Teuku Ibrahim Lamnga gugur dalam pertempuran di Gle Tarum. Kehilangan ini justru memperkuat tekadnya untuk terus berjuang melawan Belanda." },
-    { year: 1880, side: "left", title: "Menikah dengan Teuku Umar", desc: "Cut Nyak Dien menerima lamaran Teuku Umar, panglima perang legendaris. Mereka bersatu untuk memperkuat perlawanan rakyat Aceh." },
+    { year: 1880, side: "left", title: "Menikah dengan Teuku Umar", desc: "Cut Nyak Dhien menerima lamaran Teuku Umar, panglima perang legendaris. Mereka bersatu untuk memperkuat perlawanan rakyat Aceh." },
     { year: 1899, side: "right", title: "Teuku Umar Gugur", desc: "Teuku Umar gugur tertembak dalam pertempuran di Meulaboh. Meski kembali kehilangan sosok suami, Cut Nyak Dhien pantang menyerah dan mengambil alih komando untuk terus melanjutkan perang gerilya." },
     { year: 1905, side: "left", title: "Ditangkap Belanda", desc: "Setelah perjuangan panjang, ia akhirnya tertangkap karena pengkhianatan dan diasingkan ke Sumedang, Jawa Barat." },
     { year: 1908, side: "right", title: "Wafat di Sumedang", desc: "Wafat dengan penuh kemuliaan di Sumedang. Namanya abadi sebagai simbol perlawanan dan keteguhan wanita Aceh." },

@@ -43,7 +43,7 @@ function FlyToActive({ activeFocus }: { activeFocus: [number, number] }) {
 
     // Hanya fly jika lokasi benar-benar berubah
     if (!prev || prev[0] !== lng || prev[1] !== lat) {
-      map.flyTo([lat, lng], 10, { animate: true, duration: 1.2 })
+      map.flyTo([lat, lng], 9, { animate: true, duration: 1.2 })
       prevFocus.current = activeFocus
     }
   }, [activeFocus, map])
@@ -128,7 +128,6 @@ export default function OldMapPreview({
           100% { transform: translateX(-50%) scale(2.8); opacity: 0; }
         }
         .leaflet-container {
-          z-index: 0 !important;
           background: #c8dde8 !important;
           font-family: 'Playfair Display', serif;
         }
@@ -145,8 +144,6 @@ export default function OldMapPreview({
         .leaflet-popup-content {
           margin: 10px 14px !important;
         }
-        .leaflet-pane { z-index: auto !important; }
-        .leaflet-top, .leaflet-bottom { z-index: 1 !important; }
         .leaflet-tile {
           filter: sepia(25%) contrast(0.95) brightness(1.04) saturate(0.9);
         }
@@ -161,10 +158,9 @@ export default function OldMapPreview({
         }
       `}</style>
 
-      <div style={{ isolation: 'isolate', position: 'relative', height: '100%', width: '100%' }}>
       <MapContainer
-        center={[4.0, 96.2]}
-        zoom={7}
+        center={toLatLng(activeFocus)}
+        zoom={8}
         scrollWheelZoom={false}
         style={{ width: '100%', height: '100%' }}
         zoomControl={true}
@@ -210,7 +206,6 @@ export default function OldMapPreview({
           style={{ pointerEvents: 'none' }}
         />
       </MapContainer>
-      </div>
     </>
   )
 }

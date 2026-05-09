@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { Swords } from "lucide-react";
 import type { HeroData } from "@/types";
 import { cn } from "@/lib/utils";
-import sunset from "@/assets/sunset-quote.jpg";
 
 export const QuoteStatsSection = ({ hero }: { hero: HeroData }) => {
   const gold = hero.colorTheme === "gold";
   return (
     <section className="relative py-32 overflow-hidden">
       <div className="absolute inset-0">
-        <img src={sunset} alt="" className="w-full h-full object-cover" />
+        {/* Gunakan hero.heroBg agar tiap halaman punya background berbeda */}
+        <img src={hero.heroBg} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-brown-dark/65" />
       </div>
 
