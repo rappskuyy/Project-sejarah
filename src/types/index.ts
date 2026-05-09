@@ -53,7 +53,6 @@ export interface QuizQuestion {
   option_d: string;
   correct: "a" | "b" | "c" | "d";
   explanation: string | null;
-  difficulty: string | null;
   reward_ammo: number | null;
 }
 

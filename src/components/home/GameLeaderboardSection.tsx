@@ -18,7 +18,7 @@ export const GameLeaderboardSection = () => (
         </h2>
         <p className="text-muted-foreground text-lg leading-relaxed mb-8">
           Tembak musuh penjajah, jaga amunisi, dan ketika peluru habis — jawab kuis
-          tentang Cut Nyak Dien & Teuku Umar untuk mengisi ulang amunisi. Belajar
+          tentang Cut nyak dhien & Teuku Umar untuk mengisi ulang amunisi. Belajar
           sejarah sambil bermain!
         </p>
 

@@ -224,7 +224,7 @@ export function CertificateModal({ open, onClose, onClaimed }: Props) {
                       style={{ fontSize: "clamp(10px, 1.5vw, 13px)" }}
                     >
                       Telah menyelesaikan seluruh misi perjalanan belajar sejarah perjuangan<br />
-                      <em>Cut Nyak Dien</em> dan <em>Teuku Umar</em> — pahlawan Aceh yang tak terlupakan.
+                      <em>Cut nyak dhien</em> dan <em>Teuku Umar</em> — pahlawan Aceh yang tak terlupakan.
                     </p>
 
                     <div className="flex items-center gap-6 mt-2">

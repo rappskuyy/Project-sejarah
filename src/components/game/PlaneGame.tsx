@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Bell, Check, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { fallbackQuiz } from "@/lib/data/quizQuestions";
+import { fallbackQuiz, shuffleQuizQuestions } from "@/lib/data/quizQuestions";
 import type { QuizQuestion } from "@/types";
 import { cn } from "@/lib/utils";
 
@@ -63,7 +63,7 @@ export const PlaneGame = ({ onGameOver }: Props) => {
   const loadQuestion = useCallback(async () => {
     setPicked(null);
     const { data } = await supabase.from("quiz_questions").select("*").limit(50);
-    const pool = (data && data.length ? data : fallbackQuiz) as QuizQuestion[];
+    const pool = (data && data.length ? shuffleQuizQuestions(data as QuizQuestion[]) : fallbackQuiz) as QuizQuestion[];
     setQuestion(pool[Math.floor(Math.random() * pool.length)]);
     setQuizActive(true);
   }, []);

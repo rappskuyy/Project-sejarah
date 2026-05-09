@@ -8,7 +8,7 @@ import { colonialDocuments, type ColonialDocument } from '@/lib/data/colonialDoc
 const filterTabs = [
   { id: 'semua',        label: 'Semua Dokumen', icon: '📜' },
   { id: 'teuku-umar',   label: 'Teuku Umar',    icon: '⚔' },
-  { id: 'cut-nyak-dien',label: 'Cut Nyak Dien', icon: '✂' },
+  { id: 'cut-nyak-dhien',label: 'Cut nyak dhien', icon: '✂' },
   { id: 'keduanya',     label: 'Bersama',        icon: '🤝' },
 ] as const
 
@@ -119,7 +119,7 @@ export function ColonialDocuments() {
           Dokumen Era Kolonial
         </h2>
         <p className="text-[#6B4423] text-base max-w-xl mx-auto leading-relaxed font-['Crimson_Pro']">
-          Rekonstruksi surat dan dokumen dari masa perjuangan Teuku Umar dan Cut Nyak Dien.
+          Rekonstruksi surat dan dokumen dari masa perjuangan Teuku Umar dan Cut nyak dhien.
           Pilih filter untuk melihat dokumen masing-masing pahlawan.
         </p>
       </div>

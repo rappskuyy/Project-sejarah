@@ -34,7 +34,7 @@ export const HeroSection = () => (
         transition={{ delay: 0.7, duration: 0.7 }}
         className="max-w-2xl mx-auto text-lg md:text-xl text-cream/85 leading-relaxed"
       >
-        Mengenang perjuangan abadi <em>Cut Nyak Dien</em> dan <em>Teuku Umar</em> —
+        Mengenang perjuangan abadi <em>Cut nyak dhien</em> dan <em>Teuku Umar</em> —
         dua jiwa, satu semangat melawan penjajahan demi merdeka.
       </motion.p>
 

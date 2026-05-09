@@ -13,7 +13,7 @@ export interface ColonialDocument {
   content: string
   context: string
   historianNote: string
-  hero: 'cut-nyak-dien' | 'teuku-umar' | 'keduanya'
+  hero: 'cut-nyak-dhien' | 'teuku-umar' | 'keduanya'
 }
 
 export const colonialDocuments: ColonialDocument[] = [
@@ -69,7 +69,7 @@ Mayor Van der Wijck`,
     date: '10 Februari 1899',
     type: 'Surat Pribadi · Teuku Umar',
     from: 'Teuku Umar',
-    to: 'Cut Nyak Dien (Istri)',
+    to: 'Cut nyak dhien (Istri)',
     content: `Istriku yang tercinta,
 
 Besok pagi kita akan menyerang pos Belanda di Meulaboh. Hati saya mantap, karena perjuangan ini adalah kewajiban kita sebagai orang Aceh yang beriman.
@@ -86,16 +86,16 @@ Teuku Umar`,
   },
 
   // ══════════════════════════════════════
-  // DOKUMEN CUT NYAK DIEN
+  // DOKUMEN CUT NYAK DHIEN
   // ══════════════════════════════════════
 
   {
     id: 'cnd-penolakan-belanda',
-    hero: 'cut-nyak-dien',
+    hero: 'cut-nyak-dhien',
     title: 'Penolakan Tawaran Damai',
     date: 'Agustus 1901',
-    type: 'Surat Balasan · Cut Nyak Dien',
-    from: 'Cut Nyak Dien',
+    type: 'Surat Balasan · Cut nyak dhien',
+    from: 'Cut nyak dhien',
     to: 'Kapten Veltman, Komandan Belanda Meulaboh',
     content: `Tuan Kapten,
 
@@ -105,15 +105,15 @@ Selama masih ada napas dalam dada hamba, selama itu pula hamba tidak akan menyer
 
 Sampaikan kepada atasan Tuan: kami tidak membutuhkan belas kasihan Belanda.
 
-Cut Nyak Dien
+Cut nyak dhien
 Pejuang Aceh`,
-    context: `Meski dalam kondisi sakit parah — rematik yang membuatnya hampir tidak bisa berjalan dan rabun yang hampir membutakannya — Cut Nyak Dien berkali-kali menolak tawaran amnesti Belanda. Sikapnya yang tak tergoyahkan ini menjadi inspirasi bagi sisa-sisa pasukan Aceh yang masih berjuang.`,
-    historianNote: `Penolakan-penolakan ini tercatat dalam berbagai laporan militer Belanda sebagai bukti betapa sulitnya "menaklukkan" semangat Cut Nyak Dien. Belanda akhirnya memilih strategi pengasingan — memindahkannya jauh dari Aceh — karena tak mampu mematahkan semangatnya lewat rayuan damai.`,
+    context: `Meski dalam kondisi sakit parah — rematik yang membuatnya hampir tidak bisa berjalan dan rabun yang hampir membutakannya — Cut nyak dhien berkali-kali menolak tawaran amnesti Belanda. Sikapnya yang tak tergoyahkan ini menjadi inspirasi bagi sisa-sisa pasukan Aceh yang masih berjuang.`,
+    historianNote: `Penolakan-penolakan ini tercatat dalam berbagai laporan militer Belanda sebagai bukti betapa sulitnya "menaklukkan" semangat Cut nyak dhien. Belanda akhirnya memilih strategi pengasingan — memindahkannya jauh dari Aceh — karena tak mampu mematahkan semangatnya lewat rayuan damai.`,
   },
   {
     id: 'cnd-laporan-penangkapan',
-    hero: 'cut-nyak-dien',
-    title: 'Laporan Penangkapan Cut Nyak Dien',
+    hero: 'cut-nyak-dhien',
+    title: 'Laporan Penangkapan Cut nyak dhien',
     date: 'November 1905',
     type: 'Laporan Resmi · Pemerintah Kolonial',
     from: 'Letnan Kolonel Van Daalen, Komandan Aceh',
@@ -122,7 +122,7 @@ Pejuang Aceh`,
 
 Yang Terhormat Gubernur Jenderal,
 
-Dengan hormat kami laporkan bahwa Cut Nyak Dien, istri almarhum Teuku Umar, berhasil diamankan pada tanggal 6 November 1905 di Beutong Ateuh, Nagan Raya.
+Dengan hormat kami laporkan bahwa Cut nyak dhien, istri almarhum Teuku Umar, berhasil diamankan pada tanggal 6 November 1905 di Beutong Ateuh, Nagan Raya.
 
 Kondisi tertangkap: sangat lemah, menderita rematik parah, dan hampir buta. Informasi lokasi diperoleh dari Pang Laot, salah satu pengikutnya.
 
@@ -130,16 +130,16 @@ Kami merekomendasikan pengasingan segera ke luar Aceh untuk mencegah ia menjadi 
 
 Hormat kami,
 Letnan Kolonel Van Daalen`,
-    context: `Penangkapan Cut Nyak Dien pada 1905 menjadi akhir dari perlawanan bersenjata yang berlangsung lebih dari tiga dekade. Belanda mengasingkannya ke Sumedang, Jawa Barat, untuk memutus pengaruhnya terhadap rakyat Aceh.`,
-    historianNote: `Keputusan Belanda untuk mengasingkan — bukan memenjarakan atau mengeksekusi — Cut Nyak Dien mencerminkan kekhawatiran mereka terhadap dampak simbol perlawanan. Ironisnya, bahkan di pengasingan, ia terus mengajar mengaji dan menjaga semangatnya hingga wafat pada 1908.`,
+    context: `Penangkapan Cut nyak dhien pada 1905 menjadi akhir dari perlawanan bersenjata yang berlangsung lebih dari tiga dekade. Belanda mengasingkannya ke Sumedang, Jawa Barat, untuk memutus pengaruhnya terhadap rakyat Aceh.`,
+    historianNote: `Keputusan Belanda untuk mengasingkan — bukan memenjarakan atau mengeksekusi — Cut nyak dhien mencerminkan kekhawatiran mereka terhadap dampak simbol perlawanan. Ironisnya, bahkan di pengasingan, ia terus mengajar mengaji dan menjaga semangatnya hingga wafat pada 1908.`,
   },
   {
     id: 'cnd-surat-pengasingan',
-    hero: 'cut-nyak-dien',
+    hero: 'cut-nyak-dhien',
     title: 'Surat dari Pengasingan Sumedang',
     date: 'Maret 1907',
-    type: 'Surat Pribadi · Cut Nyak Dien',
-    from: 'Cut Nyak Dien (Sumedang)',
+    type: 'Surat Pribadi · Cut nyak dhien',
+    from: 'Cut nyak dhien (Sumedang)',
     to: 'Cut Gambang (Putrinya, di Aceh)',
     content: `Anakku Cut Gambang,
 
@@ -150,9 +150,9 @@ Jangan pernah menangisi ibu. Ibu baik-baik saja di sini — mengajar mengaji kep
 Jadilah perempuan yang kuat. Jaga tanah Aceh dengan ilmu dan keimanan.
 
 Ibumu yang selalu merindukanmu,
-Cut Nyak Dien`,
-    context: `Di pengasingan Sumedang, Cut Nyak Dien dikenal warga setempat sebagai "Ibu Perbu" — sosok yang dihormati karena pengetahuan agamanya. Belanda merahasiakan identitas aslinya untuk mencegah perlawanan baru. Ia mengajar mengaji secara rutin hingga kondisinya semakin memburuk.`,
-    historianNote: `Kisah Cut Nyak Dien di Sumedang menunjukkan dimensi perlawanan yang melampaui senjata — ia terus berjuang lewat ilmu dan iman. Makamnya di Gunung Puyuh, Sumedang, baru ditemukan secara resmi pada 1959, dan kini menjadi situs ziarah nasional yang dikunjungi ribuan orang setiap tahunnya.`,
+Cut nyak dhien`,
+    context: `Di pengasingan Sumedang, Cut nyak dhien dikenal warga setempat sebagai "Ibu Perbu" — sosok yang dihormati karena pengetahuan agamanya. Belanda merahasiakan identitas aslinya untuk mencegah perlawanan baru. Ia mengajar mengaji secara rutin hingga kondisinya semakin memburuk.`,
+    historianNote: `Kisah Cut nyak dhien di Sumedang menunjukkan dimensi perlawanan yang melampaui senjata — ia terus berjuang lewat ilmu dan iman. Makamnya di Gunung Puyuh, Sumedang, baru ditemukan secara resmi pada 1959, dan kini menjadi situs ziarah nasional yang dikunjungi ribuan orang setiap tahunnya.`,
   },
 
   // ══════════════════════════════════════
@@ -165,11 +165,11 @@ Cut Nyak Dien`,
     title: 'Ikrar Perlawanan Bersama',
     date: 'Januari 1896',
     type: 'Dokumen Persatuan · Keduanya',
-    from: 'Teuku Umar & Cut Nyak Dien',
+    from: 'Teuku Umar & Cut nyak dhien',
     to: 'Para Panglima dan Rakyat Aceh',
     content: `Bismillahirrahmanirrahim,
 
-Kami, Teuku Umar dan Cut Nyak Dien, menyatakan ikrar kami di hadapan Allah dan rakyat Aceh:
+Kami, Teuku Umar dan Cut nyak dhien, menyatakan ikrar kami di hadapan Allah dan rakyat Aceh:
 
 Selama hayat masih dikandung badan, kami tidak akan berhenti melawan penjajah yang merampas tanah dan kehormatan Aceh.
 
@@ -178,8 +178,8 @@ Kepada seluruh uleebalang, panglima, dan rakyat Aceh — bersatulah. Kekuatan ki
 Semoga Allah meridhai perjuangan ini.
 
 Teuku Umar Johan Pahlawan
-Cut Nyak Dien`,
-    context: `Tahun 1896 menandai puncak kerjasama Teuku Umar dan Cut Nyak Dien dalam memimpin perlawanan Aceh. Setelah Teuku Umar berhasil mendapatkan senjata dari Belanda, pasangan ini memimpin serangan besar-besaran yang menggoyang seluruh Hindia Belanda.`,
-    historianNote: `Kolaborasi Teuku Umar dan Cut Nyak Dien merupakan contoh langka dalam sejarah perlawanan kolonial — pasangan suami-istri yang bersama-sama memimpin perang selama hampir dua dekade. Keduanya menjadi simbol persatuan dan keteguhan Aceh yang menginspirasi gerakan kemerdekaan Indonesia.`,
+Cut nyak dhien`,
+    context: `Tahun 1896 menandai puncak kerjasama Teuku Umar dan Cut nyak dhien dalam memimpin perlawanan Aceh. Setelah Teuku Umar berhasil mendapatkan senjata dari Belanda, pasangan ini memimpin serangan besar-besaran yang menggoyang seluruh Hindia Belanda.`,
+    historianNote: `Kolaborasi Teuku Umar dan Cut nyak dhien merupakan contoh langka dalam sejarah perlawanan kolonial — pasangan suami-istri yang bersama-sama memimpin perang selama hampir dua dekade. Keduanya menjadi simbol persatuan dan keteguhan Aceh yang menginspirasi gerakan kemerdekaan Indonesia.`,
   },
 ]

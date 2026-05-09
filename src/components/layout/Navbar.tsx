@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { to: "/", label: "Beranda" },
-  { to: "/cut-nyak-dien", label: "Cut Nyak Dien" },
+  { to: "/cut-nyak-dhien", label: "Cut nyak dhien" },
   { to: "/teuku-umar", label: "Teuku Umar" },
   { to: "/perbandingan", label: "Perbandingan" },
   { to: "/game", label: "Game" },

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export const CtaSection = ({ hero }: { hero: HeroData }) => {
   const otherSlug = hero.slug === "cut-nyak-dien" ? "teuku-umar" : "cut-nyak-dien";
-  const otherName = hero.slug === "cut-nyak-dien" ? "Teuku Umar" : "Cut Nyak Dien";
+  const otherName = hero.slug === "cut-nyak-dhien" ? "Teuku Umar" : "Cut nyak dhien";
   const gold = hero.colorTheme === "gold";
 
   return (

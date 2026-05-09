@@ -65,7 +65,7 @@ const ComparisonPage = () => {
 
             <div className="mt-10 rounded-2xl overflow-hidden bg-brown-dark text-cream shadow-elegant max-w-3xl mx-auto">
               <div className="grid grid-cols-3 text-[0.65rem] md:text-xs font-cinzel tracking-[0.2em] uppercase border-b border-cream/10">
-                <div className="p-3 text-gold-light text-center md:text-left md:pl-5">Cut Nyak Dien</div>
+                <div className="p-3 text-gold-light text-center md:text-left md:pl-5">Cut nyak dhien</div>
                 <div className="p-3 text-cream/70 text-center">Aspek</div>
                 <div className="p-3 text-maroon-light text-center md:text-right md:pr-5">Teuku Umar</div>
               </div>
@@ -118,8 +118,7 @@ const ComparisonPage = () => {
                 <div>
                   <Icons.Quote className="h-7 w-7 text-gold-light mx-auto mb-4" />
                   <blockquote className="font-playfair italic text-xl md:text-2xl text-cream max-w-3xl">
-                    "Bersama mereka berjuang, bersama mereka menginspirasi —
-                    dua jiwa, satu perjuangan abadi."
+                    "Kita tidak akan menang bila kita masih terus mengingat semua kekalahan."
                   </blockquote>
                 </div>
               </div>

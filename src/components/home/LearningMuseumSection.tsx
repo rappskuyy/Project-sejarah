@@ -25,12 +25,12 @@ type HistoricalEvent = {
   focus: [number, number];
 };
 
-// Perjalanan lengkap Cut Nyak Dien & Teuku Umar — kronologis akurat
+// Perjalanan lengkap Cut nyak dhien & Teuku Umar — kronologis akurat
 const events: HistoricalEvent[] = [
   {
-    id: "lahir-cnd", year: "1848", title: "Cut Nyak Dien Lahir di Lampadang",
+    id: "lahir-cnd", year: "1848", title: "Cut nyak dhien Lahir di Lampadang",
     location: "Lampadang, Aceh Besar", region: "Aceh Besar",
-    text: "Cut Nyak Dien lahir sekitar 1848 di Lampadang, putri Teuku Nanta Setia — uleebalang VI Mukim. Sejak kecil ia dididik dengan nilai-nilai Islam yang kuat dan jiwa kebangsawanan Aceh yang tinggi.",
+    text: "Cut nyak dhien lahir sekitar 1848 di Lampadang, putri Teuku Nanta Setia — uleebalang VI Mukim. Sejak kecil ia dididik dengan nilai-nilai Islam yang kuat dan jiwa kebangsawanan Aceh yang tinggi.",
     focus: [95.4333, 5.4833],
   },
   {
@@ -46,57 +46,57 @@ const events: HistoricalEvent[] = [
     focus: [95.3239, 5.5477],
   },
   {
-    id: "nikah-pertama", year: "1875", title: "Cut Nyak Dien Menikah Pertama",
+    id: "nikah-pertama", year: "1875", title: "Cut nyak dhien Menikah Pertama",
     location: "Lampadang, Aceh Besar", region: "Aceh Besar",
-    text: "Cut Nyak Dien menikah dengan Teuku Ibrahim Lamnga, putra uleebalang Lam Nga XIII. Pernikahan ini memperkuat jaringan perjuangan keluarga bangsawan Aceh dalam menghadapi invasi Belanda.",
+    text: "Cut nyak dhien menikah dengan Teuku Ibrahim Lamnga, putra uleebalang Lam Nga XIII. Pernikahan ini memperkuat jaringan perjuangan keluarga bangsawan Aceh dalam menghadapi invasi Belanda.",
     focus: [95.4333, 5.4833],
   },
   {
-    id: "ibrahim-gugur", year: "1878", title: "Suami Pertama Cut Nyak Dien Gugur",
+    id: "ibrahim-gugur", year: "1878", title: "Suami Pertama Cut nyak dhien Gugur",
     location: "Gle Tarum, Aceh Besar", region: "Aceh Besar",
-    text: "Teuku Ibrahim Lamnga gugur di pertempuran Gle Tarum pada 1878. Cut Nyak Dien sangat berduka namun menolak melarikan diri — ia bersumpah akan meneruskan perjuangan suaminya melawan penjajah Belanda.",
+    text: "Teuku Ibrahim Lamnga gugur di pertempuran Gle Tarum pada 1878. Cut nyak dhien sangat berduka namun menolak melarikan diri — ia bersumpah akan meneruskan perjuangan suaminya melawan penjajah Belanda.",
     focus: [95.6000, 5.5200],
   },
   {
-    id: "nikah-tu", year: "1880", title: "Cut Nyak Dien Menikahi Teuku Umar",
+    id: "nikah-tu", year: "1880", title: "Cut nyak dhien Menikahi Teuku Umar",
     location: "Banda Aceh", region: "Kota Banda Aceh",
-    text: "Teuku Umar melamar Cut Nyak Dien dengan alasan perjuangan. Cut Nyak Dien menerima karena Teuku Umar adalah pejuang gigih. Pernikahan ini menyatukan dua kekuatan perlawanan terbesar Aceh.",
+    text: "Teuku Umar melamar Cut nyak dhien dengan alasan perjuangan. Cut nyak dhien menerima karena Teuku Umar adalah pejuang gigih. Pernikahan ini menyatukan dua kekuatan perlawanan terbesar Aceh.",
     focus: [95.3239, 5.5477],
   },
   {
     id: "gerilya-utara", year: "1884", title: "Perang Gerilya di Aceh Utara",
     location: "Paya Bakong, Aceh Utara", region: "Aceh Utara",
-    text: "Teuku Umar dan Cut Nyak Dien memimpin perang gerilya di Aceh Utara. Cut Nyak Dien aktif menguatkan moral pasukan, merawat pejuang yang terluka, dan ikut berpindah-pindah markas di hutan.",
+    text: "Teuku Umar dan Cut nyak dhien memimpin perang gerilya di Aceh Utara. Cut nyak dhien aktif menguatkan moral pasukan, merawat pejuang yang terluka, dan ikut berpindah-pindah markas di hutan.",
     focus: [97.0833, 4.9500],
   },
   {
     id: "penyamaran", year: "1893", title: "Teuku Umar Infiltrasi Belanda",
     location: "Kutaraja, Banda Aceh", region: "Kota Banda Aceh",
-    text: "Teuku Umar berpura-pura menyerah ke Belanda dan berhasil mendapat 800 senjata, 25.000 peluru, dan 17 meriam. Ini adalah strategi gerilya paling cerdik — Cut Nyak Dien mendukung penuh siasat suaminya.",
+    text: "Teuku Umar berpura-pura menyerah ke Belanda dan berhasil mendapat 800 senjata, 25.000 peluru, dan 17 meriam. Ini adalah strategi gerilya paling cerdik — Cut nyak dhien mendukung penuh siasat suaminya.",
     focus: [95.3239, 5.5477],
   },
   {
     id: "balik-serang", year: "1896", title: "Teuku Umar Berbalik Melawan Belanda",
     location: "Pesisir Barat Aceh", region: "Aceh Barat",
-    text: "Dengan senjata yang didapat dari Belanda, Teuku Umar memimpin serangan besar-besaran di pesisir barat. Cut Nyak Dien ikut dalam pengungsian dan terus mengobarkan semangat para pejuang di garis belakang.",
+    text: "Dengan senjata yang didapat dari Belanda, Teuku Umar memimpin serangan besar-besaran di pesisir barat. Cut nyak dhien ikut dalam pengungsian dan terus mengobarkan semangat para pejuang di garis belakang.",
     focus: [95.9000, 4.5000],
   },
   {
-    id: "tu-gugur", year: "1899", title: "Teuku Umar Gugur — Cut Nyak Dien Berjuang Sendiri",
+    id: "tu-gugur", year: "1899", title: "Teuku Umar Gugur — Cut nyak dhien Berjuang Sendiri",
     location: "Meulaboh, Aceh Barat", region: "Aceh Barat",
-    text: "11 Februari 1899: Teuku Umar gugur karena dikhianati. Cut Nyak Dien yang menderita rematik parah dan mulai rabun terus memimpin sisa pasukan di hutan. Ia menolak menyerah meski tubuhnya semakin lemah.",
+    text: "11 Februari 1899: Teuku Umar gugur karena dikhianati. Cut nyak dhien yang menderita rematik parah dan mulai rabun terus memimpin sisa pasukan di hutan. Ia menolak menyerah meski tubuhnya semakin lemah.",
     focus: [96.1283, 4.1417],
   },
   {
-    id: "beutong", year: "1905", title: "Cut Nyak Dien Ditangkap Belanda",
+    id: "beutong", year: "1905", title: "Cut nyak dhien Ditangkap Belanda",
     location: "Beutong Ateuh, Nagan Raya", region: "Nagan Raya",
-    text: "Pang Laot, pengikut setia Cut Nyak Dien, terpaksa memberitahu lokasi persembunyian ke Belanda karena kasihan melihat kondisinya yang sangat memprihatinkan. Belanda menangkap Cut Nyak Dien di pedalaman Nagan Raya.",
+    text: "Pang Laot, pengikut setia Cut nyak dhien, terpaksa memberitahu lokasi persembunyian ke Belanda karena kasihan melihat kondisinya yang sangat memprihatinkan. Belanda menangkap Cut nyak dhien di pedalaman Nagan Raya.",
     focus: [96.3333, 4.1000],
   },
   {
-    id: "sumedang", year: "1908", title: "Cut Nyak Dien Wafat di Sumedang",
+    id: "sumedang", year: "1908", title: "Cut nyak dhien Wafat di Sumedang",
     location: "Sumedang, Jawa Barat", region: "Jawa Barat",
-    text: "Diasingkan ke Sumedang, Cut Nyak Dien tetap mengajar mengaji hingga wafat 6 November 1908. Dimakamkan di Gunung Puyuh, Sumedang. Presiden Soekarno menganugerahinya gelar Pahlawan Nasional pada 1964.",
+    text: "Diasingkan ke Sumedang, Cut nyak dhien tetap mengajar mengaji hingga wafat 6 November 1908. Dimakamkan di Gunung Puyuh, Sumedang. Presiden Soekarno menganugerahinya gelar Pahlawan Nasional pada 1964.",
     focus: [107.9200, -6.8500],
   },
 ];
@@ -109,7 +109,7 @@ const MISSIONS: {
   to: string;
   label: string;
 }[] = [
-  { key: "biografi", icon: BookOpen, title: "Biografi Tokoh", text: "Latar keluarga, masa muda, dan perubahan hidup Cut Nyak Dien serta Teuku Umar.", to: "/cut-nyak-dien", label: "Telusuri peta Aceh" },
+  { key: "biografi", icon: BookOpen, title: "Biografi Tokoh", text: "Latar keluarga, masa muda, dan perubahan hidup Cut nyak dhien serta Teuku Umar.", to: "/cut-nyak-dhien", label: "Telusuri peta Aceh" },
   { key: "strategi", icon: Shield, title: "Strategi Perang", text: "Gerilya, penguasaan medan, penyamaran, dan cara membangun kepercayaan rakyat.", to: "/perbandingan", label: "Klik timeline sejarah" },
   { key: "peta", icon: MapPin, title: "Peta Wilayah Aceh", text: "Pelajari batas kabupaten/kota Aceh, lokasi sejarah, dan rute perjuangan melalui peta interaktif.", to: "/teuku-umar", label: "Baca materi cepat" },
   { key: "game", icon: Sparkles, title: "Fakta Cepat & Game", text: "Ringkasan tanggal, tempat, nilai perjuangan, dan istilah penting untuk persiapan quiz.", to: "/game", label: "Uji pemahaman di game" },

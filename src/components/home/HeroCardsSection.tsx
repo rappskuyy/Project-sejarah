@@ -32,7 +32,7 @@ export const HeroCardsSection = () => (
         className="mt-10 rounded-2xl overflow-hidden bg-brown-dark text-cream shadow-elegant"
       >
         <div className="grid grid-cols-3 text-[0.6rem] md:text-xs font-cinzel tracking-[0.2em] uppercase border-b border-cream/10">
-          <div className="p-3 text-gold-light text-center">Cut Nyak Dien</div>
+          <div className="p-3 text-gold-light text-center">Cut nyak dhien</div>
           <div className="p-3 text-cream/70 text-center">Aspek</div>
           <div className="p-3 text-maroon-light text-center">Teuku Umar</div>
         </div>

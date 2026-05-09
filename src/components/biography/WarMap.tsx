@@ -9,11 +9,11 @@ import {
 
 const filterTabs = [
   { id: 'all',           label: 'Semua Lokasi',  icon: '⊞', count: warLocations.length },
-  { id: 'cut-nyak-dien', label: 'Cut Nyak Dien', icon: '✂', count: warLocations.filter(l => l.hero === 'cut-nyak-dien').length },
+  { id: 'cut-nyak-dhien', label: 'Cut nyak dhien', icon: '✂', count: warLocations.filter(l => l.hero === 'cut-nyak-dhien').length },
   { id: 'teuku-umar',    label: 'Teuku Umar',    icon: '⚔', count: warLocations.filter(l => l.hero === 'teuku-umar').length },
 ] as const
 
-// Timeline khusus Cut Nyak Dien
+// Timeline khusus Cut nyak dhien
 const cndTimeline = warLocations
   .filter(l => l.hero === 'cut-nyak-dien')
   .sort((a, b) => parseInt(a.year) - parseInt(b.year))
@@ -116,14 +116,14 @@ export function WarMap() {
           <div className="bg-[#FFF3CD] rounded-2xl border border-[#D4B896] p-4 text-[#6B4423]">
             <p className="font-['Playfair_Display'] text-base font-bold mb-1">
               {filter === 'cut-nyak-dien'
-                ? '✂ Perjalanan Cut Nyak Dien'
+                ? '✂ Perjalanan Cut nyak dhien'
                 : filter === 'teuku-umar'
                 ? '⚔ Perjalanan Teuku Umar'
                 : '⊞ Semua Lokasi Perang Aceh'}
             </p>
             <p className="text-sm leading-relaxed font-['Crimson_Pro']">
               {filter === 'cut-nyak-dien'
-                ? 'Ikuti perjalanan Cut Nyak Dien dari kelahiran di Lampadang (1848) hingga wafat di Sumedang (1908) — 60 tahun penuh pengorbanan untuk Aceh.'
+                ? 'Ikuti perjalanan Cut nyak dhien dari kelahiran di Lampadang (1848) hingga wafat di Sumedang (1908) — 60 tahun penuh pengorbanan untuk Aceh.'
                 : filter === 'teuku-umar'
                 ? 'Telusuri jejak Teuku Umar dari Meulaboh (1854) hingga gugur sebagai pahlawan (1899) dengan strategi gerilya paling brillian.'
                 : 'Peta ini menampilkan seluruh lokasi bersejarah Perang Aceh. Pilih filter untuk fokus pada perjalanan masing-masing pahlawan.'
@@ -260,7 +260,7 @@ export function WarMap() {
           <p className="text-xs text-[#8B6423] font-['Crimson_Pro'] leading-relaxed mt-1">
             Garis putus-putus emas menunjukkan jalur pergerakan pasukan pejuang Aceh
             dari Kutaraja hingga pedalaman Aceh Tengah dan Meulaboh. Gunakan filter
-            <strong> Cut Nyak Dien</strong> untuk melihat 12 titik perjalanan lengkapnya,
+            <strong> Cut nyak dhien</strong> untuk melihat 12 titik perjalanan lengkapnya,
             atau <strong>Teuku Umar</strong> untuk 7 titik strategi gerilyanya.
           </p>
         </div>

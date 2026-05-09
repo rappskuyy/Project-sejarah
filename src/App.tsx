@@ -34,7 +34,7 @@ const App = () => (
         <main className="min-h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/cut-nyak-dien" element={<CutNyakDienPage />} />
+            <Route path="/cut-nyak-dhien" element={<CutNyakDienPage />} />
             <Route path="/teuku-umar" element={<TeukuUmarPage />} />
             <Route path="/perbandingan" element={<ComparisonPage />} />
             <Route path="/game" element={<GamePage />} />

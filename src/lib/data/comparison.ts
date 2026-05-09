@@ -9,7 +9,7 @@ export const comparisonRows = [
 
 export const similarities = [
   { icon: "MapPin", text: "Sama-sama berasal dari Aceh" },
-  { icon: "Heart", text: "Menikah satu sama lain (1880)" },
+  { icon: "Heart", text: "Menikah satu sama lain tahun 1880" },
   { icon: "Sword", text: "Berjuang melawan penjajahan Belanda" },
   { icon: "Shield", text: "Ditetapkan sebagai Pahlawan Nasional" },
   { icon: "Flame", text: "Menggunakan taktik gerilya" },

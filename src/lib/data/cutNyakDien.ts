@@ -56,9 +56,9 @@ export const cutNyakDienData: HeroData = {
     { icon: "Film", category: "Film Nasional (1988)", title: "Film Nasional", desc: 'Film "Tjoet Nja Dhien" (1988) yang dibintangi Christine Hakim adalah salah satu film sejarah terbaik Indonesia. Film ini memenangkan banyak Piala Citra dan menjadi film Indonesia pertama yang ditayangkan di Festival Film Cannes.' },
     { icon: "DollarSign", category: "Uang Kertas", title: "Uang Kertas", desc: "Wajah Cut Nyak Dhien pernah diabadikan dalam uang kertas Rupiah, yaitu pada pecahan Rp10.000 emisi tahun 1998." },
     { icon: "MapPin", category: "Makam Bersejarah", title: "Makam Bersejarah", desc: "Cut Nyak Dhien wafat dalam pengasingan di Sumedang, Jawa Barat. Makamnya di Gunung Puyuh, Sumedang, kini menjadi situs ziarah nasional yang penting." },
-    { icon: "Building2", category: "Nama Jalan", title: "Nama Jalan", desc: "Nama Cut Nyak Dien diabadikan di ratusan nama jalan, sekolah, rumah sakit, dan institusi di seluruh Indonesia sebagai penghormatan abadi, seperti Jalan Cut Nyak Dhien di Menteng, Jakarta Pusat." },
+    { icon: "Building2", category: "Nama Jalan", title: "Nama Jalan", desc: "Nama Cut nyak dhien diabadikan di ratusan nama jalan, sekolah, rumah sakit, dan institusi di seluruh Indonesia sebagai penghormatan abadi, seperti Jalan Cut nyak dhien di Menteng, Jakarta Pusat." },
     { icon: "Award", category: "Pahlawan Nasional 1964", title: "Pahlawan Nasional", desc: "Ia ditetapkan sebagai Pahlawan Nasional Indonesia melalui Keppres No. 106 Tahun 1964 pada masa pemerintahan Presiden Soekarno." },
-    { icon: "BookOpen", category: "Kurikulum Nasional", title: "Kurikulum Nasional", desc: "Kisah perjuangan Cut Nyak Dien masuk dalam kurikulum pendidikan nasional Indonesia, menginspirasi jutaan generasi penerus bangsa, seperti dalam buku pelajaran sejarah kelas XI, dari bab \"Perlawanan Terhadap Kolonialisme Belanda\"." },
+    { icon: "BookOpen", category: "Kurikulum Nasional", title: "Kurikulum Nasional", desc: "Kisah perjuangan Cut nyak dhien masuk dalam kurikulum pendidikan nasional Indonesia, menginspirasi jutaan generasi penerus bangsa, seperti dalam buku pelajaran sejarah kelas XI, dari bab \"Perlawanan Terhadap Kolonialisme Belanda\"." },
   ],
   strategies: [
     { title: "Perang Gerilya Hutan", desc: "Berpindah-pindah di hutan rimba Aceh untuk menghindari kejaran Belanda dan melancarkan serangan kejutan.", effectiveness: 92 },
@@ -76,6 +76,6 @@ export const cutNyakDienData: HeroData = {
     { value: "57", label: "Tahun Usia Berjuang" },
     { value: "31", label: "Tahun Perang Aceh" },
     { value: "1964", label: "Pahlawan Nasional" },
-    { value: "6", label: "Anak yang Gugur" },
+    { value: "1", label: "Anak" },
   ],
 };

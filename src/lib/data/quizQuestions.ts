@@ -1,32 +1,29 @@
 import type { QuizQuestion } from "@/types";
 
-// Fallback questions when Supabase is unreachable
-// Soal-soal diambil dari biografi Cut Nyak Dien & Teuku Umar di website
-export const fallbackQuiz: QuizQuestion[] = [
- {
+// Soal-soal dasar
+const fallbackQuestions: QuizQuestion[] = [
+   {
     id: "cnd-med-1",
     hero: "cut-nyak-dien",
     question: "Siapakah yang mengambil alih komando pasukan kecil di pedalaman Meulaboh setelah Teuku Umar gugur pada tahun 1899?",
     option_a: "Pang Laot",
     option_b: "Cut Gambang",
-    option_c: "Cut Nyak Dien",
+    option_c: "Cut nyak dhien",
     option_d: "Teuku Cek Ibrahim Lamnga",
     correct: "c",
-    explanation: "Setelah Teuku Umar gugur, Cut Nyak Dien mengambil alih komando dan memimpin perlawanan gerilya di pedalaman Meulaboh.",
-    difficulty: "easy",
+    explanation: "Setelah Teuku Umar gugur, Cut nyak dhien mengambil alih komando dan memimpin perlawanan gerilya di pedalaman Meulaboh.",
     reward_ammo: 5,
   },
   {
     id: "cnd-med-2",
     hero: "cut-nyak-dien",
-    question: "Apa alasan utama Pang Laot melaporkan lokasi markas Cut Nyak Dien kepada Belanda?",
+    question: "Apa alasan utama Pang Laot melaporkan lokasi markas Cut nyak dhien kepada Belanda?",
     option_a: "Karena tergiur hadiah uang dari Belanda",
-    option_b: "Merasa iba melihat kondisi fisik Cut Nyak Dien yang sakit dan menderita",
+    option_b: "Merasa iba melihat kondisi fisik Cut nyak dhien yang sakit dan menderita",
     option_c: "Ingin mengakhiri perang secara diplomatik",
     option_d: "Perintah dari sisa-sisa bangsawan Aceh",
     correct: "b",
-    explanation: "Pang Laot merasa iba melihat kesehatan Cut Nyak Dien yang terus menurun dan penglihatannya yang mulai rabun.",
-    difficulty: "easy",
+    explanation: "Pang Laot merasa iba melihat kesehatan Cut nyak dhien yang terus menurun dan penglihatannya yang mulai rabun.",
     reward_ammo: 5,
   },
   {
@@ -39,7 +36,6 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "10 Tahun",
     correct: "c",
     explanation: "Secara statistik materi ini merujuk pada periode intensif perlawanan selama kurang lebih 31 tahun (1873-1904).",
-    difficulty: "easy",
     reward_ammo: 5,
   },
   {
@@ -48,11 +44,10 @@ export const fallbackQuiz: QuizQuestion[] = [
     question: "Apa yang dilakukan Teuku Umar pada tanggal 30 September 1893 berdasarkan arsip dokumen resmi?",
     option_a: "Melakukan serangan balik ke Lhokseumawe",
     option_b: "Menulis surat penyerahan palsu kepada Gubernur Militer Belanda",
-    option_c: "Melangsungkan pernikahan dengan Cut Nyak Dien",
+    option_c: "Melangsungkan pernikahan dengan Cut nyak dhien",
     option_d: "Memproklamasikan kemerdekaan wilayah Meulaboh",
     correct: "b",
     explanation: "Teuku Umar melakukan taktik 'penyerahan diri' untuk mendapatkan senjata dan logistik dari Belanda sebelum akhirnya kembali memihak Aceh.",
-    difficulty: "easy",
     reward_ammo: 5,
   },
   {
@@ -65,7 +60,6 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "85%",
     correct: "c",
     explanation: "Berdasarkan data taktik jenius, mobilisasi rakyat memiliki skor efektivitas 93%.",
-    difficulty: "easy",
     reward_ammo: 5,
   },
   {
@@ -78,20 +72,18 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "Sumedang",
     correct: "c",
     explanation: "Tahun 1873 menandai dimulainya keterlibatan aktif Teuku Umar secara luas di berbagai wilayah perang Aceh.",
-    difficulty: "easy",
     reward_ammo: 5,
   },
   {
     id: "cnd-med-7",
     hero: "cut-nyak-dien",
-    question: "Apa peran Cut Nyak Dien selama di pengasingan Sumedang selain dikenal sebagai sosok yang religius?",
+    question: "Apa peran Cut nyak dhien selama di pengasingan Sumedang selain dikenal sebagai sosok yang religius?",
     option_a: "Penasihat politik lokal",
     option_b: "Menjadi guru mengaji bagi masyarakat setempat",
     option_c: "Pemimpin gerakan bawah tanah",
     option_d: "Penerjemah bahasa Belanda",
     correct: "b",
-    explanation: "Cut Nyak Dien dijuluki 'Ibu Perbu' karena pengabdiannya mengajarkan Al-Qur'an kepada warga Sumedang.",
-    difficulty: "easy",
+    explanation: "Cut nyak dhien dijuluki 'Ibu Perbu' karena pengabdiannya mengajarkan Al-Qur'an kepada warga Sumedang.",
     reward_ammo: 5,
   },
   {
@@ -104,7 +96,6 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "Snouck Hurgronje",
     correct: "b",
     explanation: "Pasukan Belanda yang melakukan penyergapan terhadap Teuku Umar di Meulaboh dipimpin oleh Letnan Veltman.",
-    difficulty: "easy",
     reward_ammo: 5,
   },
   {
@@ -117,7 +108,6 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "31 Daerah",
     correct: "b",
     explanation: "Teuku Umar berhasil menyatukan lebih dari 10 wilayah di Aceh untuk melakukan perlawanan terpadu.",
-    difficulty: "easy",
     reward_ammo: 5,
   },
   {
@@ -130,7 +120,6 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "Menjadi film sejarah pertama yang dibuat di Aceh",
     correct: "b",
     explanation: "Film 'Tjoet Nja' Dhien' tercatat sebagai film Indonesia pertama yang diputar di ajang bergengsi Festival Film Cannes.",
-    difficulty: "easy",
     reward_ammo: 5,
   },
   {
@@ -143,7 +132,6 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "KRI Pahlawan Aceh",
     correct: "c",
     explanation: "KRI Teuku Umar-385 adalah kapal jenis korvet milik TNI AL yang dinamai untuk menghormati jasanya.",
-    difficulty: "easy",
     reward_ammo: 5,
   },
   {
@@ -152,11 +140,10 @@ export const fallbackQuiz: QuizQuestion[] = [
     question: "Berapa jumlah anak yang tercatat gugur dalam perjuangan berdasarkan statistik infografis?",
     option_a: "2 Anak",
     option_b: "4 Anak",
-    option_c: "6 Anak",
+    option_c: "1 Anak",
     option_d: "8 Anak",
     correct: "c",
     explanation: "Berdasarkan data sejarah dalam infografis, terdapat 6 keturunan/anak yang turut gugur dalam perjuangan.",
-    difficulty: "easy",
     reward_ammo: 5,
   },
   {
@@ -165,11 +152,10 @@ export const fallbackQuiz: QuizQuestion[] = [
     question: "Apa isi utama dari 'Laporan Pengkhianatan Teuku Umar' tertanggal 1 Januari 1896?",
     option_a: "Kabar duka kematian Teuku Umar",
     option_b: "Laporan darurat Belanda karena Teuku Umar berbalik melawan mereka",
-    option_c: "Surat izin pengasingan Cut Nyak Dien",
+    option_c: "Surat izin pengasingan Cut nyak dhien",
     option_d: "Strategi penangkapan Pang Laot",
     correct: "b",
     explanation: "Laporan ini mencatat momen 'pengkhianatan' besar bagi Belanda ketika Teuku Umar membawa lari senjata dan pasukan.",
-    difficulty: "easy",
     reward_ammo: 5,
   },
   {
@@ -182,7 +168,6 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "Melakukan negosiasi dengan Gubernur Belanda",
     correct: "b",
     explanation: "Gerilya mengandalkan mobilitas tinggi di medan hutan untuk melumpuhkan musuh secara mendadak.",
-    difficulty: "easy",
     reward_ammo: 5,
   },
   {
@@ -195,7 +180,6 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "Markas Besar TNI",
     correct: "c",
     explanation: "Museum Aceh di Banda Aceh menyimpan berbagai koleksi artefak dan sejarah perjuangan pahlawan Aceh.",
-    difficulty: "easy",
     reward_ammo: 5,
   },
 
@@ -203,14 +187,13 @@ export const fallbackQuiz: QuizQuestion[] = [
   {
     id: "cnd-hard-1",
     hero: "cut-nyak-dien",
-    question: "Mengapa Belanda memutuskan untuk merahasiakan identitas asli Cut Nyak Dien selama di Sumedang?",
+    question: "Mengapa Belanda memutuskan untuk merahasiakan identitas asli Cut nyak dhien selama di Sumedang?",
     option_a: "Untuk melindungi keselamatannya dari pemberontak lokal",
     option_b: "Untuk memutus pengaruh dan semangat perlawanannya dari pejuang di Aceh",
     option_c: "Karena Belanda menghormati status bangsawannya",
     option_d: "Karena masyarakat Jawa Barat menolak pengungsi dari Aceh",
     correct: "b",
-    explanation: "Belanda khawatir keberadaan Cut Nyak Dien akan memicu semangat perlawanan baru jika diketahui oleh para pejuang.",
-    difficulty: "hard",
+    explanation: "Belanda khawatir keberadaan Cut nyak dhien akan memicu semangat perlawanan baru jika diketahui oleh para pejuang.",
     reward_ammo: 10,
   },
   {
@@ -223,7 +206,6 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "Ia tidak bisa membaca surat dari Gubernur Belanda",
     correct: "b",
     explanation: "Teuku Umar dikenal jenius dalam taktik militer meskipun ia tidak pernah belajar di sekolah militer formal Belanda.",
-    difficulty: "hard",
     reward_ammo: 10,
   },
   {
@@ -232,11 +214,10 @@ export const fallbackQuiz: QuizQuestion[] = [
     question: "Manakah pernyataan yang BENAR mengenai garis keturunan pahlawan berdasarkan materi 'Fakta Menarik'?",
     option_a: "Teuku Umar murni keturunan bangsawan dari Turki",
     option_b: "Teuku Umar berasal dari Minangkabau",
-    option_c: "Cut Nyak Dien memiliki darah keturunan Minangkabau dari pihak ayahnya",
-    option_d: "Cut Nyak Dien berasal dari keluarga nelayan",
+    option_c: "Cut nyak dhien memiliki darah keturunan Minangkabau dari pihak ayahnya",
+    option_d: "Cut nyak dhien berasal dari keluarga nelayan",
     correct: "c",
-    explanation: "Garis keturunan Cut Nyak Dien berasal dari Nanta Setia, yang memiliki akar keturunan dari perantau Minangkabau.",
-    difficulty: "hard",
+    explanation: "Garis keturunan Cut nyak dhien berasal dari Nanta Setia, yang memiliki akar keturunan dari perantau Minangkabau.",
     reward_ammo: 10,
   },
   {
@@ -248,21 +229,19 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_c: "Mengirim surat protes ke pemerintah pusat di Belanda",
     option_d: "Melakukan gencatan senjata sementara di wilayah Meulaboh",
     correct: "b",
-    explanation: "Cut Nyak Dien dan pasukannya teguh menolak segala bentuk kompromi yang ditawarkan oleh pihak kolonial.",
-    difficulty: "hard",
+    explanation: "Cut nyak dhien dan pasukannya teguh menolak segala bentuk kompromi yang ditawarkan oleh pihak kolonial.",
     reward_ammo: 10,
   },
   {
     id: "cnd-hard-5",
     hero: "cut-nyak-dien",
-    question: "Apa kaitan antara tahun 1905 dalam kronologi Cut Nyak Dien dengan tokoh Pang Laot?",
-    option_a: "Pang Laot membantu Cut Nyak Dien melarikan diri ke Sumedang",
+    question: "Apa kaitan antara tahun 1905 dalam kronologi Cut nyak dhien dengan tokoh Pang Laot?",
+    option_a: "Pang Laot membantu Cut nyak dhien melarikan diri ke Sumedang",
     option_b: "Tahun tersebut menandai penangkapannya akibat laporan Pang Laot",
-    option_c: "Pang Laot gugur melindungi Cut Nyak Dien di tahun tersebut",
+    option_c: "Pang Laot gugur melindungi Cut nyak dhien di tahun tersebut",
     option_d: "Mereka berdua menyerahkan diri secara sukarela",
     correct: "b",
-    explanation: "Akibat kondisi Cut Nyak Dien yang memprihatinkan, Pang Laot terpaksa memberi tahu Belanda lokasinya pada akhir 1905.",
-    difficulty: "hard",
+    explanation: "Akibat kondisi Cut nyak dhien yang memprihatinkan, Pang Laot terpaksa memberi tahu Belanda lokasinya pada akhir 1905.",
     reward_ammo: 10,
   },
   {
@@ -275,7 +254,6 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "Kesedihan atas gugurnya Teuku Umar",
     correct: "b",
     explanation: "Ungkapan ini menunjukkan kebencian yang mendalam dan prinsip yang tidak akan goyah terhadap penjajah Belanda.",
-    difficulty: "hard",
     reward_ammo: 10,
   },
   {
@@ -288,20 +266,18 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "1899",
     correct: "c",
     explanation: "Het Verraad van Teukoe Oemar (Pengkhianatan Teuku Umar) terjadi pada 1896 saat ia membawa lari persenjataan Belanda.",
-    difficulty: "hard",
     reward_ammo: 10,
   },
   {
     id: "cnd-hard-8",
     hero: "cut-nyak-dien",
-    question: "Apa tindakan kolonial yang menyebabkan lokasi makam Cut Nyak Dien sempat menjadi misteri selama puluhan tahun?",
+    question: "Apa tindakan kolonial yang menyebabkan lokasi makam Cut nyak dhien sempat menjadi misteri selama puluhan tahun?",
     option_a: "Memindahkan makam ke Aceh secara rahasia",
     option_b: "Menghancurkan nisan agar tidak diziarahi",
     option_c: "Merahasiakan identitas aslinya saat beliau wafat pada 1908",
     option_d: "Menempatkan makam di kompleks militer tertutup",
     correct: "c",
     explanation: "Hingga akhir hayatnya, Belanda menyembunyikan identitas asli beliau agar makamnya tidak menjadi simbol perlawanan.",
-    difficulty: "hard",
     reward_ammo: 10,
   },
   {
@@ -309,25 +285,23 @@ export const fallbackQuiz: QuizQuestion[] = [
     hero: "cut-nyak-dien",
     question: "Apa perbedaan mendasar antara strategi 'Infiltrasi & Intelijen' dan 'Tipu Daya Penyerahan'?",
     option_a: "Infiltrasi berfokus pada menyusup untuk informasi, sedangkan Tipu Daya untuk mendapatkan kepercayaan dan senjata",
-    option_b: "Infiltrasi dilakukan oleh Cut Nyak Dien, Tipu Daya oleh Teuku Umar",
+    option_b: "Infiltrasi dilakukan oleh Cut nyak dhien, Tipu Daya oleh Teuku Umar",
     option_c: "Infiltrasi dilakukan di hutan, Tipu Daya dilakukan di kota",
     option_d: "Tidak ada perbedaan, keduanya adalah istilah yang sama",
     correct: "a",
     explanation: "Infiltrasi bersifat rahasia untuk informasi, sedangkan taktik penyerahan Umar adalah manuver diplomatik terbuka untuk materi perang.",
-    difficulty: "hard",
     reward_ammo: 10,
   },
   {
     id: "cnd-hard-10",
     hero: "cut-nyak-dien",
-    question: "Berdasarkan materi 'Kurikulum Nasional', kisah perjuangan Cut Nyak Dien secara spesifik dipelajari pada...",
+    question: "Berdasarkan materi 'Kurikulum Nasional', kisah perjuangan Cut nyak dhien secara spesifik dipelajari pada...",
     option_a: "Bab 'Perang Pasifik' kelas XII",
     option_b: "Bab 'Pergerakan Nasional' SMP",
     option_c: "Bab 'Perlawanan Terhadap Kolonialisme Belanda' kelas XI",
     option_d: "Kurikulum Pendidikan Dasar",
     correct: "c",
     explanation: "Perjuangan fisik daerah masuk dalam kompetensi dasar sejarah kelas XI di tingkat SMA/MA.",
-    difficulty: "hard",
     reward_ammo: 10,
   },
   {
@@ -340,7 +314,6 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "Kembalinya ke pihak pejuang pada 1896",
     correct: "c",
     explanation: "Ini adalah kalimat legendaris Teuku Umar yang menunjukkan tekadnya sebelum gugur di pesisir Meulaboh.",
-    difficulty: "hard",
     reward_ammo: 10,
   },
   {
@@ -353,7 +326,6 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "Penulisan biografi oleh Presiden Soekarno",
     correct: "c",
     explanation: "Identitas beliau di Sumedang baru dipastikan secara luas setelah makamnya ditemukan dan diverifikasi pada tahun 1959.",
-    difficulty: "hard",
     reward_ammo: 10,
   },
   {
@@ -366,20 +338,18 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "Ingin mempelajari struktur administrasi Belanda",
     correct: "b",
     explanation: "Langkah ini adalah bagian dari taktik perang jangka panjang untuk memperkuat angkatan perang Aceh dengan persenjataan modern.",
-    difficulty: "hard",
     reward_ammo: 10,
   },
   {
     id: "cnd-hard-14",
     hero: "cut-nyak-dien",
-    question: "Strategi 'Perlawanan Moral' Cut Nyak Dien memiliki efektivitas 98%. Dasar dari taktik ini adalah...",
+    question: "Strategi 'Perlawanan Moral' Cut nyak dhien memiliki efektivitas 98%. Dasar dari taktik ini adalah...",
     option_a: "Memberikan bantuan finansial kepada rakyat",
     option_b: "Menginspirasi rakyat lewat keteguhan hati meski kondisi sudah sakit dan tua",
     option_c: "Melakukan protes damai di depan kantor Belanda",
     option_d: "Menulis surat penolakan kepada Gubernur Jenderal",
     correct: "b",
     explanation: "Perlawanan moral menunjukkan bahwa meski fisik melemah, semangat ideologis tidak boleh tunduk pada penjajah.",
-    difficulty: "hard",
     reward_ammo: 10,
   },
   {
@@ -392,7 +362,33 @@ export const fallbackQuiz: QuizQuestion[] = [
     option_d: "Sistem komunikasi kurir rahasia",
     correct: "b",
     explanation: "Taktik gerilya yang diterapkan di Aceh menjadi dasar fundamental bagi strategi perang kemerdekaan Indonesia kemudian hari.",
-    difficulty: "hard",
     reward_ammo: 10,
   },
 ];
+
+/**
+ * Fungsi untuk mengacak urutan array (Fisher-Yates Shuffle)
+ */
+const shuffleArray = (array: QuizQuestion[]) => {
+  const shuffled = [...array]; // Copy array agar tidak merusak data asli
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
+export const getShuffledQuiz = (): QuizQuestion[] => {
+  const shuffled = [...fallbackQuestions]; 
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    // Gunakan semicolon sebelum destructuring untuk menghindari error interpretasi JS
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
+// Export hasil yang sudah diacak
+export const fallbackQuiz = shuffleArray(fallbackQuestions);
+
+export const shuffleQuizQuestions = (questions: QuizQuestion[]) => shuffleArray(questions);

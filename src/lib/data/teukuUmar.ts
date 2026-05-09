@@ -45,7 +45,7 @@ export const teukuUmarData: HeroData = {
   timeline: [
     { year: 1854, side: "left", title: "Kelahiran di Meulaboh", desc: "Lahir di Meulaboh, Aceh Barat dari keluarga uleebalang yang dihormati. Sejak kecil dikenal cerdas dan pemberani." },
     { year: 1873, side: "right", title: "Bergabung Perlawanan", desc: "Aktif berjuang sejak pecah Perang Aceh, memimpin pasukan kecil dan memenangkan banyak pertempuran." },
-    { year: 1880, side: "left", title: "Menikahi Cut Nyak Dien", desc: "Bersatu dengan Cut Nyak Dien membentuk pasangan legendaris yang menjadi simbol perlawanan rakyat Aceh." },
+    { year: 1880, side: "left", title: "Menikahi Cut nyak dhien", desc: "Bersatu dengan Cut nyak dhien membentuk pasangan legendaris yang menjadi simbol perlawanan rakyat Aceh." },
     { year: 1883, side: "right", title: "Pura-pura Menyerah", desc: "Strategi genius: berpura-pura menyerah ke Belanda untuk memperoleh kepercayaan, pangkat, dan akses senjata." },
     { year: 1884, side: "left", title: "Berhasil Dapatkan Senjata", desc: "Berhasil kumpulkan 800 senapan dan 17 meriam dari Belanda dalam strategi 'Het Verraad van Teukoe Oemar'." },
     { year: 1896, side: "right", title: "Kembali ke Perlawanan", desc: "Balik melawan Belanda dengan senjata curian, melancarkan serangan-serangan dahsyat di seluruh Aceh." },

@@ -18,7 +18,7 @@ const STORAGE_KEY = "pahlawan_aceh_mission_progress";
 export const REQUIRED_SECONDS = 120; // 2 minutes
 
 export const MISSION_ROUTES: Record<MissionKey, string> = {
-  biografi: "/cut-nyak-dien",
+  biografi: "/cut-nyak-dhien",
   strategi: "/perbandingan",
   peta: "/teuku-umar",
   game: "/game",

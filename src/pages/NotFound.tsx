@@ -507,7 +507,7 @@ const NotFound = () => {
                       label: 'Jejak Sejarah',
                       color: 'var(--maroon-light)',
                       borderColor: 'rgba(128,18,34,0.25)',
-                      text: 'Halaman ini tidak tersedia, tetapi semangat Cut Nyak Dien dan Teuku Umar tetap hidup di setiap tautan.',
+                      text: 'Halaman ini tidak tersedia, tetapi semangat Cut nyak dhien dan Teuku Umar tetap hidup di setiap tautan.',
                     },
                   ].map((card, i) => (
                     <div
