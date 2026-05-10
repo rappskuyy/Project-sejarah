@@ -6,7 +6,7 @@ export const Footer = () => {
   const creators = [
     { name: "Muhamad Fedliansyah Ilham", url: "https://mfedliansyahilham.my.id/" },
     { name: "Raffasya Javas Niscala Widjaja", url: "https://rappskuyy.my.id/" },
-    { name: "Anugrah Mulya Setiyawan", url: "#" },
+    { name: "Anugrah Mulya Setiyawan", url: "" },
   ];
 
   return (
