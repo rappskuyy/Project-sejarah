@@ -4,7 +4,7 @@ import heroBg from "@/assets/bgteukuumar.png";
 import g1 from "@/assets/teukuumarteman.jpg";
 import g2 from "@/assets/makamteukuumar.jpeg";
 import g3 from "@/assets/Tugu tempat gugurnya Teuku Umar di Meulaboh, Aceh 1916.jpg";
-import g4 from "@/assets/gallery-tomb.jpg";
+import g4 from "@/assets/penyeranganrumahteukuumar.jpg";
 
 export const teukuUmarData: HeroData = {
   slug: "teuku umar",
@@ -69,7 +69,7 @@ export const teukuUmarData: HeroData = {
     { title: "Teuku Umar Bersama Pengikutnya", category: "Foto Dokumenter", image: g1 },
     { title: "Makam Teuku Umar", category: "Situs Bersejarah", image: g2 },
     { title: "Tugu Tempat Gugurnya Teuku Umar", category: "Situs Bersejarah", image: g3 },
-    { title: "Warisan Sejarah", category: "Peninggalan Abadi", image: g4 },
+    { title: "Penyrangan Rumah Teuku Umar", category: "Foto Dokumenter", image: g4 },
   ],
   heroStats: [
     { value: "45", label: "Tahun Usia Berjuang" },

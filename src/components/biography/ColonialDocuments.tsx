@@ -8,15 +8,15 @@ import { colonialDocuments, type ColonialDocument } from '@/lib/data/colonialDoc
 const filterTabs = [
   { id: 'semua',        label: 'Semua Dokumen', icon: '📜' },
   { id: 'teuku-umar',   label: 'Teuku Umar',    icon: '⚔' },
-  { id: 'cut-nyak-dhien',label: 'Cut nyak dhien', icon: '✂' },
+  { id: 'cut-nyak-dhien',label: 'Cut Nyak Dien', icon: '✂' },
   { id: 'keduanya',     label: 'Bersama',        icon: '🤝' },
 ] as const
 
 // ── SUB: Sisi Depan Kartu ──────────────────────────────────────────────────
 function CardFront({ doc }: { doc: ColonialDocument }) {
   const isHero = (id: string) => doc.hero === id
-  const accentColor = isHero('cut-nyak-dien') ? '#C8922A' : isHero('teuku-umar') ? '#8B1A1A' : '#4A7C3F'
-  const stampLabel = isHero('cut-nyak-dien') ? 'Cut\nNyak\nDien' : isHero('teuku-umar') ? 'Teuku\nUmar' : 'Aceh\nBersatu'
+  const accentColor = isHero('cut-nyak-dhien') ? '#C8922A' : isHero('teuku-umar') ? '#8B1A1A' : '#4A7C3F'
+  const stampLabel = isHero('cut-nyak-dhien') ? 'Cut\nNyak\nDien' : isHero('teuku-umar') ? 'Teuku\nUmar' : 'Aceh\nBersatu'
 
   return (
     <div className="w-full h-full bg-[#F5EDD8] border border-[#D4B896] rounded-2xl overflow-hidden flex flex-col">
@@ -83,7 +83,7 @@ function CardBack({ doc }: { doc: ColonialDocument }) {
 
 // ── MAIN COMPONENT ─────────────────────────────────────────────────────────
 export function ColonialDocuments() {
-  const [filter, setFilter] = useState<'semua' | 'teuku-umar' | 'cut-nyak-dien' | 'keduanya'>('semua')
+  const [filter, setFilter] = useState<'semua' | 'teuku-umar' | 'cut-nyak-dhien' | 'keduanya'>('semua')
   const [activeId, setActiveId] = useState(colonialDocuments[0].id)
   const [flipped, setFlipped] = useState(false)
 
@@ -119,7 +119,7 @@ export function ColonialDocuments() {
           Dokumen Era Kolonial
         </h2>
         <p className="text-[#6B4423] text-base max-w-xl mx-auto leading-relaxed font-['Crimson_Pro']">
-          Rekonstruksi surat dan dokumen dari masa perjuangan Teuku Umar dan Cut nyak dhien.
+          Rekonstruksi surat dan dokumen dari masa perjuangan Teuku Umar dan Cut Nyak Dien.
           Pilih filter untuk melihat dokumen masing-masing pahlawan.
         </p>
       </div>
@@ -191,8 +191,8 @@ export function ColonialDocuments() {
               >
                 {/* Hero badge */}
                 <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 text-white text-xs`}
-                  style={{ background: doc.hero === 'cut-nyak-dien' ? '#C8922A' : doc.hero === 'teuku-umar' ? '#8B1A1A' : '#4A7C3F' }}>
-                  {doc.hero === 'cut-nyak-dien' ? '✂' : doc.hero === 'teuku-umar' ? '⚔' : '🤝'}
+                  style={{ background: doc.hero === 'cut-nyak-dhien' ? '#C8922A' : doc.hero === 'teuku-umar' ? '#8B1A1A' : '#4A7C3F' }}>
+                  {doc.hero === 'cut-nyak-dhien' ? '✂' : doc.hero === 'teuku-umar' ? '⚔' : '🤝'}
                 </div>
                 <div className="min-w-0">
                   <p className="font-['Playfair_Display'] text-sm font-bold text-[#2C1810] truncate">

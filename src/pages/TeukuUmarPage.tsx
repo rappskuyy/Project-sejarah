@@ -9,7 +9,7 @@ import { LegacySection } from "@/components/biography/LegacySection";
 import { StrategySection } from "@/components/biography/StrategySection";
 import { GallerySection } from "@/components/biography/GallerySection";
 import { CtaSection } from "@/components/biography/CtaSection";
-import { ColonialDocuments } from "@/components/biography/ColonialDocuments";
+import { ColonialDocuments } from "../components/biography/ColonialDocuments";
 import { WarMap } from "@/components/biography/WarMap";
 import { MissionTimer } from "@/components/home/MissionTimer";
 
