@@ -5,7 +5,8 @@ export const Footer = () => {
   // Data Pembuat
   const creators = [
     { name: "Muhamad Fedliansyah Ilham", url: "https://mfedliansyahilham.my.id/" },
-    { name: "Raffasya Javas Niscala Widjaja", url: "https://rappskuyy.my.id/" }
+    { name: "Raffasya Javas Niscala Widjaja", url: "https://rappskuyy.my.id/" },
+    { name: "Anugrah Mulya Setiyawan", url: "#" },
   ];
 
   return (
@@ -96,7 +97,7 @@ export const Footer = () => {
           <div className="flex items-center gap-1.5 bg-brown-light/20 px-3 py-1 rounded-full border border-cream/5">
             Dibuat oleh 
             <span className="text-cream/80 font-medium">
-              {creators[0].name} & {creators[1].name}
+              {creators[0].name} & {creators[1].name} & {creators[2].name}
             </span>
           </div>
         </div>
