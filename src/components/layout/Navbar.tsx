@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
-import { Moon, Sun, Menu, X, Swords } from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -45,11 +45,8 @@ export const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <span className="grid place-items-center h-9 w-9 rounded-full bg-gradient-gold shadow-gold transition-transform group-hover:scale-110">
-            <Swords className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />
-          </span>
-          <span className="font-cinzel text-sm md:text-base font-semibold tracking-[0.25em] uppercase text-foreground">
-            Pahlawan Aceh
+          <span className="font-cinzel text-xl font-bold text-amber-800">
+            PAHLAWAN ACEH
           </span>
         </Link>
 
